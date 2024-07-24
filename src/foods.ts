@@ -31,5 +31,33 @@ export const carbos = [
         fat: 0,
         kcal: 12.5
     }
-    
+
+]
+
+export const prot = [
+
+    {
+        name: 'Peito de Frango Cru',
+        carb: 0,
+        prot: 2.2,
+        fat: 0.2,
+        kcal: 11.9
+    },
+
+    {
+        name: 'Ovo Cru',
+        carb: 0.2,
+        prot: 1.3,
+        fat: 0.8,
+        kcal: 14.3
+    },
+
+    {
+        name: 'Carne Bovina Patinho Cru (Sem Gordura)',
+        carb: 0,
+        prot: 2.2,
+        fat: 0.4,
+        kcal: 13.4
+    }
+
 ]
