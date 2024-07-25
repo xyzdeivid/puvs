@@ -1,4 +1,5 @@
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
 import { buttonStyle, mainColor, mainGradiente } from 'styles'
 import { functions } from 'functions/user'
@@ -49,6 +50,8 @@ export default function Info() {
         borderRadius: '50%',
     }
 
+    const navigate = useNavigate()
+
     return (
         <div style={containerStyle}>
             <div style={{ position: 'relative', marginBottom: '16px' }}>
@@ -59,7 +62,7 @@ export default function Info() {
                     <li style={listStyle} key={3}><b>Sugestão de consumo de água:</b> {water}ml</li>
                 </ul>
             </div>
-            <button style={buttonStyle}>Crie sua dieta aqui!</button>
+            <button onClick={() => navigate('/dietpage')} style={buttonStyle}>Crie sua dieta aqui!</button>
         </div>
     )
 }
