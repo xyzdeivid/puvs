@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { UserContext } from 'UserInfo'
-import { mainColor, mainGradiente } from 'styles'
+import { buttonStyle, mainColor, mainGradiente } from 'styles'
 import { functions } from 'functions/user'
 
 export default function Info() {
@@ -59,6 +59,7 @@ export default function Info() {
                     <li style={listStyle} key={3}><b>Sugestão de consumo de água:</b> {water}ml</li>
                 </ul>
             </div>
+            <button style={buttonStyle}>Crie sua dieta aqui!</button>
         </div>
     )
 }

@@ -9,3 +9,11 @@ export const selectStyle: React.CSSProperties = {
     padding: '2px',
     borderRadius: '1px'
 }
+
+export const buttonStyle: React.CSSProperties = {
+    border: 'none',
+    fontSize: '16px',
+    fontWeight: 'bold',
+    backgroundColor: 'transparent',
+    cursor: 'pointer'
+}
