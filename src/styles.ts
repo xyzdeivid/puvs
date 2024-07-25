@@ -17,3 +17,13 @@ export const buttonStyle: React.CSSProperties = {
     backgroundColor: 'transparent',
     cursor: 'pointer'
 }
+
+export const containerStyle: React.CSSProperties = {
+    width: '100vw',
+    height: '100vh',
+    backgroundColor: 'white',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+}

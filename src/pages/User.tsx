@@ -1,7 +1,7 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
-import { buttonStyle, mainColor, mainGradiente } from 'styles'
+import { buttonStyle, mainColor, mainGradiente, containerStyle } from 'styles'
 import { functions } from 'functions/user'
 
 export default function Info() {
@@ -19,16 +19,6 @@ export default function Info() {
     const imc = functionsSource.imcCalculator()
     const dailyCalorieExpenditure = functionsSource.dailyCalorieExpenditure()
     const water = functionsSource.waterCalculator()
-
-    const containerStyle: React.CSSProperties = {
-        width: '100vw',
-        height: '100vh',
-        backgroundColor: 'white',
-        display: 'flex',
-        flexDirection: 'column',
-        justifyContent: 'center',
-        alignItems: 'center',
-    }
 
     const listStyle: React.CSSProperties = {
         background: mainGradiente,

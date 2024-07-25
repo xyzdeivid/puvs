@@ -1,6 +1,8 @@
+import { containerStyle } from 'styles'
+
 export default function DietPage() {
     return (
-        <div>
+        <div style={containerStyle}>
             Hello World
         </div>
     )
