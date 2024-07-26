@@ -1,5 +1,5 @@
 export const carbos = [
-    
+
     {
         name: 'Arroz Tipo 1 Cozido',
         carb: 2.8,
@@ -61,3 +61,7 @@ export const prot = [
     }
 
 ]
+
+const foods = [carbos, prot]
+
+export default foods

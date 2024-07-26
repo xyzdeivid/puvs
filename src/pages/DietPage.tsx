@@ -4,6 +4,7 @@ import { UserContext } from 'UserInfo'
 
 import { containerStyle, mainGradiente } from 'styles'
 import { useContext } from 'react'
+import FoodForm from 'components/DietPage/FoodForm'
 
 export default function DietPage() {
 
@@ -37,6 +38,7 @@ export default function DietPage() {
             <div>
                 <button style={buttonStyle}>Adicionar Alimento</button>
             </div>
+            <FoodForm />
         </div>
     )
 }
