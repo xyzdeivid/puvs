@@ -3,7 +3,7 @@ import { functions } from 'functions/user'
 import { UserContext } from 'UserInfo'
 
 import { containerStyle, mainGradiente } from 'styles'
-import { useContext } from 'react'
+import { useContext, useState } from 'react'
 import FoodForm from 'components/DietPage/FoodForm'
 
 export default function DietPage() {
@@ -29,6 +29,8 @@ export default function DietPage() {
         borderRadius: '3px'
     }
 
+    const [showFoodForm, setShowFoodForm] = useState(false)
+
     return (
         <div style={containerStyle}>
             <div>
@@ -36,9 +38,15 @@ export default function DietPage() {
                 <h4>Calorias da dieta: </h4>
             </div>
             <div>
-                <button style={buttonStyle}>Adicionar Alimento</button>
+                <button style={buttonStyle} onClick={e => {
+                    setShowFoodForm(true)
+                }}>Adicionar Alimento</button>
             </div>
-            <FoodForm />
+            {
+                showFoodForm
+                    ? <FoodForm />
+                    : null
+            }
         </div>
     )
 }
