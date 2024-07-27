@@ -9,7 +9,8 @@ import ConfirmButton from './FormComponents/ConfirmButton'
 
 import { closeForm } from 'functions/form'
 
-import { formcontainerStyle, formStyle } from 'styles'
+import { formcontainerStyle } from 'styles'
+import FormStyle from 'components/common/FormStyle'
 
 interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -42,7 +43,7 @@ export default function Form({ setShowForm }: FormProps) {
             ref={formRef}
             onClick={e => closeForm(e, formRef, setShowForm)}
             style={formcontainerStyle}>
-            <div style={formStyle}>
+            <FormStyle>
                 <form onSubmit={e => {
                     e.preventDefault()
                     navigate('/user')
@@ -56,7 +57,7 @@ export default function Form({ setShowForm }: FormProps) {
                     </div>
                     <ConfirmButton />
                 </form>
-            </div>
+            </FormStyle>
         </div>
     )
 }
