@@ -4,6 +4,7 @@ import FormStyle from 'components/common/FormStyle'
 import NutrientSourcesInput from './FoodFormComponents/NutrientSourcesInput'
 
 import { formcontainerStyle } from 'styles'
+import FoodOptionsInput from './FoodFormComponents/FoodOptionsInput'
 
 export default function FoodForm() {
 
@@ -15,6 +16,9 @@ export default function FoodForm() {
                 <form>
                     <NutrientSourcesInput
                         setNutrientSource={setNutrientSource}
+                    />
+                    <FoodOptionsInput
+                        nutrientSource={nutrientSource}
                     />
                 </form>
             </FormStyle>
