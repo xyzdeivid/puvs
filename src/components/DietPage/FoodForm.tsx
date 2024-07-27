@@ -1,10 +1,15 @@
+import NutrientSourcesInput from './FoodFormComponents/NutrientSourcesInput'
+
 import { formcontainerStyle, formStyle } from 'styles'
 
 export default function FoodForm() {
+
     return (
         <div style={formcontainerStyle}>
             <div style={formStyle}>
-                <h1>***FOOD FORM***</h1>
+                <form>
+                    <NutrientSourcesInput />
+                </form>
             </div>
         </div>
     )
