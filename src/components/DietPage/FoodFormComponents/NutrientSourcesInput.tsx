@@ -3,17 +3,21 @@ import Label from 'components/common/Label'
 
 import { selectStyle } from 'styles'
 
-const nutrientSources = [['Carboidrato'], ['Proteína']]
+const nutrientSources = ['Carboidrato', 'Proteína']
 
-export default function NutrientSourcesInput() {
+interface NutrientSourcesInputProps {
+    setNutrientSource: React.Dispatch<React.SetStateAction<number>>
+}
+
+export default function NutrientSourcesInput({ setNutrientSource }: NutrientSourcesInputProps) {
     return (
         <InputContainer>
             <Label name='Fonte de Macronutriente' />
-            <select style={selectStyle}>
+            <select onChange={e => setNutrientSource(Number(e.target.value))} style={selectStyle}>
                 {
                     nutrientSources.map(source => {
                         return (
-                            <option>{source} </option>
+                            <option value={nutrientSources.indexOf(source)}>{source} </option>
                         )
                     })
                 }
