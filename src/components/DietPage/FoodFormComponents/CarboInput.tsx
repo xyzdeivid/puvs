@@ -5,7 +5,7 @@ export default function CarboInput() {
     return (
         <InputContainer>
             <Label name='Carboidrato (g)' />
-            <input type='number' />
+            <input type='number' required />
         </InputContainer>
     )
 }

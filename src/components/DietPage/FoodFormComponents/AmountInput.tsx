@@ -5,7 +5,7 @@ export default function AmountInput() {
     return (
         <InputContainer>
             <Label name='Quantidade (g)' />
-            <input type='number' />
+            <input type='number' required />
         </InputContainer>
     )
 }

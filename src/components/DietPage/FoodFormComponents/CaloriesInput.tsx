@@ -5,7 +5,7 @@ export default function CaloriesInput() {
     return (
         <InputContainer>
             <Label name='Calorias (kcal)' />
-            <input type='number' />
+            <input type='number' required />
         </InputContainer>
     )
 }

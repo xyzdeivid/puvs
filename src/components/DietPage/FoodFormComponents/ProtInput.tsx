@@ -5,7 +5,7 @@ export default function ProtInput() {
     return (
         <InputContainer>
             <Label name='Proteína (g)' />
-            <input type='number' />
+            <input type='number' required />
         </InputContainer>
     )
 }

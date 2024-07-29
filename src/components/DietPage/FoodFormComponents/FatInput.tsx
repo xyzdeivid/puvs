@@ -5,7 +5,7 @@ export default function FatInput() {
     return (
         <InputContainer>
             <Label name='Gordura (g)' />
-            <input type='number' />
+            <input type='number' required />
         </InputContainer>
     )
 }
