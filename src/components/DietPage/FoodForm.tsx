@@ -24,7 +24,7 @@ export default function FoodForm() {
         <div style={formcontainerStyle}>
             <FormStyle>
                 <form>
-                    <FoodNameInput />
+                    <FoodNameInput setFoodName={setFoodName} />
                     <AmountInput />
                     <hr />
                     <CarboInput />

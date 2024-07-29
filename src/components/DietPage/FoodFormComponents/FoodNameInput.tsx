@@ -1,11 +1,15 @@
 import InputContainer from 'components/common/InputContainer'
 import Label from 'components/common/Label'
 
-export default function FoodNameInput() {
+interface FoodNameInputProps {
+    setFoodName: React.Dispatch<React.SetStateAction<string>>
+}
+
+export default function FoodNameInput({ setFoodName }: FoodNameInputProps) {
     return (
         <InputContainer>
             <Label name='Nome' />
-            <input type='text' required />
+            <input onChange={e => setFoodName(e.target.value)} type='text' required />
         </InputContainer>
     )
 }
