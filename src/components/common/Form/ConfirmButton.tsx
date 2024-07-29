@@ -1,6 +1,10 @@
-import { mainGradiente } from '../../../styles'
+import { mainGradiente } from 'styles'
 
-export default function ConfirmButton() {
+interface ConfirmButtonProps {
+    text: string
+}
+
+export default function ConfirmButton({ text }: ConfirmButtonProps) {
 
     const buttonStyle: React.CSSProperties = {
         border: 'none',
@@ -14,6 +18,7 @@ export default function ConfirmButton() {
     }
 
     return (
-            <button style={buttonStyle} type='submit'>Verificar</button>
+        <button style={buttonStyle} type='submit'>{text}</button>
     )
+
 }

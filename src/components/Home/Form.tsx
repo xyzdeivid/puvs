@@ -5,7 +5,7 @@ import { UserContext } from '../../UserInfo'
 import NumberInput from './FormComponents/NumberInput'
 import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
-import ConfirmButton from './FormComponents/ConfirmButton'
+import ConfirmButton from 'components/common/Form/ConfirmButton'
 
 import { closeForm } from 'functions/form'
 
@@ -55,7 +55,7 @@ export default function Form({ setShowForm }: FormProps) {
                         <NumberInput name='Idade' setValue={setAge} />
                         <ExerciseLevelInput setExerciseLevel={setExerciseLevel} />
                     </div>
-                    <ConfirmButton />
+                    <ConfirmButton text='Verificar' />
                 </form>
             </FormStyle>
         </div>
