@@ -1,25 +1,26 @@
-import { useState } from 'react'
-
 import FormStyle from 'components/common/FormStyle'
-import NutrientSourcesInput from './FoodFormComponents/NutrientSourcesInput'
+import FoodNameInput from './FoodFormComponents/FoodNameInput'
+import AmountInput from './FoodFormComponents/AmountInput'
+import CarboInput from './FoodFormComponents/CarboInput'
+import ProtInput from './FoodFormComponents/ProtInput'
+import FatInput from './FoodFormComponents/FatInput'
+import CaloriesInput from './FoodFormComponents/CaloriesInput'
 
 import { formcontainerStyle } from 'styles'
-import FoodOptionsInput from './FoodFormComponents/FoodOptionsInput'
 
 export default function FoodForm() {
-
-    const [nutrientSource, setNutrientSource] = useState(0)
 
     return (
         <div style={formcontainerStyle}>
             <FormStyle>
                 <form>
-                    <NutrientSourcesInput
-                        setNutrientSource={setNutrientSource}
-                    />
-                    <FoodOptionsInput
-                        nutrientSource={nutrientSource}
-                    />
+                    <FoodNameInput />
+                    <AmountInput />
+                    <hr />
+                    <CarboInput />
+                    <ProtInput />
+                    <FatInput />
+                    <CaloriesInput />
                 </form>
             </FormStyle>
         </div>
