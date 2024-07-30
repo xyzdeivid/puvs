@@ -1,7 +1,10 @@
 import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
-import { buttonStyle, mainColor, mainGradiente, containerStyle } from 'styles'
+
+import Li from 'components/common/Li'
+
+import { buttonStyle, mainColor, containerStyle } from 'styles'
 import { functions } from 'functions/user'
 
 export default function Info() {
@@ -20,16 +23,6 @@ export default function Info() {
     const dailyCalorieExpenditure = functionsSource.dailyCalorieExpenditure()
     const water = functionsSource.waterCalculator()
 
-    const listStyle: React.CSSProperties = {
-        background: mainGradiente,
-        color: 'white',
-        padding: '8px',
-        borderRadius: '4px',
-        marginBottom: '8px',
-        position: 'relative',
-        borderBottom: `1px solid ${mainColor}`,
-    }
-
     const circleStyle: React.CSSProperties = {
         width: '16px',
         height: '16px',
@@ -47,9 +40,9 @@ export default function Info() {
             <div style={{ position: 'relative', marginBottom: '16px' }}>
                 <div style={circleStyle}></div>
                 <ul>
-                    <li style={listStyle} key={1}><b>IMC:</b> {imc}</li>
-                    <li style={listStyle} key={2}><b>Estimativa de gasto calórico:</b> {dailyCalorieExpenditure}kcal</li>
-                    <li style={listStyle} key={3}><b>Sugestão de consumo de água:</b> {water}ml</li>
+                    <Li index='IMC' text={imc} />
+                    <Li index='Estimativa de gasto calórico' text={`${dailyCalorieExpenditure}kcal`} />
+                    <Li index='Sugestão de consumo de água' text={`${water}ml`} />
                 </ul>
             </div>
             <button onClick={() => navigate('/dietpage')} style={buttonStyle}>Crie sua dieta aqui!</button>
