@@ -2,11 +2,14 @@ import { functions } from 'functions/user'
 
 import { UserContext } from 'UserInfo'
 
-import { containerStyle, mainGradiente } from 'styles'
 import { useContext, useState } from 'react'
 import FoodForm from 'components/DietPage/FoodForm'
-import { foods } from 'types'
 import Foods from 'components/DietPage/Foods'
+import OpenFormButton from 'components/common/OpenFormButton'
+
+import { containerStyle } from 'styles'
+
+import { foods } from 'types'
 
 export default function DietPage() {
 
@@ -23,17 +26,6 @@ export default function DietPage() {
 
     const dailyCalorieExpenditure = functions(weight, height, age, exerciseLevel, sex).dailyCalorieExpenditure()
 
-    const buttonStyle: React.CSSProperties = {
-        border: 'none',
-        background: mainGradiente,
-        color: 'white',
-        padding: '6px',
-        fontWeight: 'bold',
-        cursor: 'pointer',
-        marginTop: '8px',
-        borderRadius: '3px'
-    }
-
     return (
         <div style={containerStyle}>
             <div>
@@ -41,9 +33,10 @@ export default function DietPage() {
                 <h4>Calorias da dieta: </h4>
             </div>
             <div>
-                <button style={buttonStyle} onClick={e => {
-                    setShowFoodForm(true)
-                }}>Adicionar Alimento</button>
+                <OpenFormButton
+                    setShowForm={setShowFoodForm}
+                    buttonText='Adicionar Alimento'
+                />
             </div>
             {
                 showFoodForm
