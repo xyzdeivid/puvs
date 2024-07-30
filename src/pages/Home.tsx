@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Container from 'components/common/Container'
 import About from 'components/Home/About'
 import Form from 'components/Home/Form'
-import FormButton from 'components/Home/FormButton'
+import OpenFormButton from 'components/common/OpenFormButton'
 
 export default function Home() {
 
@@ -20,7 +20,7 @@ export default function Home() {
         <>
             <Container>
                 <About />
-                <FormButton setShowForm={setShowForm} />
+                <OpenFormButton setShowForm={setShowForm} buttonText='Descubra!' />
                 {
                     showForm
                         ? <Form setShowForm={setShowForm} />

@@ -5,7 +5,7 @@ import { UserContext } from '../../UserInfo'
 import NumberInput from './FormComponents/NumberInput'
 import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
-import ConfirmButton from 'components/common/Form/ConfirmButton'
+import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
 import { closeForm } from 'functions/form'
 

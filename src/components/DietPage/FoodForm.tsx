@@ -3,7 +3,7 @@ import { useState } from 'react'
 import FormStyle from 'components/common/FormStyle'
 import FoodNameInput from './FoodFormComponents/FoodNameInput'
 import NumberInput from './FoodFormComponents/NumberInput'
-import ConfirmButton from 'components/common/Form/ConfirmButton'
+import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
 import { formcontainerStyle } from 'styles'
 
