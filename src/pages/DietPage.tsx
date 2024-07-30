@@ -6,6 +6,7 @@ import { useContext, useState } from 'react'
 import FoodForm from 'components/DietPage/FoodForm'
 import Foods from 'components/DietPage/Foods'
 import OpenFormButton from 'components/common/OpenFormButton'
+import Li from 'components/common/Li'
 
 import { containerStyle } from 'styles'
 
@@ -28,10 +29,10 @@ export default function DietPage() {
 
     return (
         <div style={containerStyle}>
-            <div>
-                <h4>Gasto calórico: {dailyCalorieExpenditure}kcal</h4>
-                <h4>Calorias da dieta: </h4>
-            </div>
+            <ul>
+                <Li index='Gasto calórico' text={`${dailyCalorieExpenditure}kcal`} />
+                <Li index='Calorias da dieta' />
+            </ul>
             <div>
                 <OpenFormButton
                     setShowForm={setShowFoodForm}
