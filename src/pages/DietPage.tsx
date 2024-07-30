@@ -6,6 +6,7 @@ import { containerStyle, mainGradiente } from 'styles'
 import { useContext, useState } from 'react'
 import FoodForm from 'components/DietPage/FoodForm'
 import { foods } from 'types'
+import Foods from 'components/DietPage/Foods'
 
 export default function DietPage() {
 
@@ -47,6 +48,11 @@ export default function DietPage() {
             {
                 showFoodForm
                     ? <FoodForm setFoods={setFoods} setShowFoodForm={setShowFoodForm} />
+                    : null
+            }
+            {
+                foods[0]
+                    ? <Foods />
                     : null
             }
         </div>
