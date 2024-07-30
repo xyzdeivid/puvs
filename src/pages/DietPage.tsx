@@ -46,7 +46,7 @@ export default function DietPage() {
             </div>
             {
                 showFoodForm
-                    ? <FoodForm setFoods={setFoods} />
+                    ? <FoodForm setFoods={setFoods} setShowFoodForm={setShowFoodForm} />
                     : null
             }
         </div>

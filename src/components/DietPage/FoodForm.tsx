@@ -11,9 +11,10 @@ import { foods } from 'types'
 
 interface FoodFormProps {
     setFoods: React.Dispatch<React.SetStateAction<foods>>
+    setShowFoodForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function FoodForm({ setFoods }: FoodFormProps) {
+export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
 
     const [name, setName] = useState('')
     const [amount, setAmount] = useState(0)
@@ -32,6 +33,7 @@ export default function FoodForm({ setFoods }: FoodFormProps) {
             calories
         }
         setFoods(prev => [...prev, food])
+        setShowFoodForm(false)
     }
 
     return (
