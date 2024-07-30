@@ -5,6 +5,7 @@ import { UserContext } from 'UserInfo'
 import { containerStyle, mainGradiente } from 'styles'
 import { useContext, useState } from 'react'
 import FoodForm from 'components/DietPage/FoodForm'
+import { foods } from 'types'
 
 export default function DietPage() {
 
@@ -30,6 +31,7 @@ export default function DietPage() {
     }
 
     const [showFoodForm, setShowFoodForm] = useState(false)
+    const [foods, setFoods] = useState<foods>([])
 
     return (
         <div style={containerStyle}>
