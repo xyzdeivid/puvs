@@ -17,6 +17,9 @@ export default function DietPage() {
     const [exerciseLevel] = user.exerciseLevel
     const [sex] = user.sex
 
+    const [showFoodForm, setShowFoodForm] = useState(false)
+    const [foods, setFoods] = useState<foods>([])
+
     const dailyCalorieExpenditure = functions(weight, height, age, exerciseLevel, sex).dailyCalorieExpenditure()
 
     const buttonStyle: React.CSSProperties = {
@@ -29,9 +32,6 @@ export default function DietPage() {
         marginTop: '8px',
         borderRadius: '3px'
     }
-
-    const [showFoodForm, setShowFoodForm] = useState(false)
-    const [foods, setFoods] = useState<foods>([])
 
     return (
         <div style={containerStyle}>
@@ -46,7 +46,7 @@ export default function DietPage() {
             </div>
             {
                 showFoodForm
-                    ? <FoodForm />
+                    ? <FoodForm setFoods={setFoods} />
                     : null
             }
         </div>

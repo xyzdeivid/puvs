@@ -7,7 +7,13 @@ import ConfirmButton from 'components/common/Form/ConfirmButton'
 
 import { formcontainerStyle } from 'styles'
 
-export default function FoodForm() {
+import { foods } from 'types'
+
+interface FoodFormProps {
+    setFoods: React.Dispatch<React.SetStateAction<foods>>
+}
+
+export default function FoodForm({ setFoods }: FoodFormProps) {
 
     const [name, setName] = useState('')
     const [amount, setAmount] = useState(0)
@@ -25,6 +31,7 @@ export default function FoodForm() {
             fat,
             calories
         }
+        setFoods(prev => [...prev, food])
     }
 
     return (
