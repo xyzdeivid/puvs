@@ -27,7 +27,7 @@ export default function Home() {
                         : null
                 }
             </Container>
-            <span style={versionStyle}>1.0.0</span>
+            <span style={versionStyle}>1.1.0</span>
         </>
     )
 }
