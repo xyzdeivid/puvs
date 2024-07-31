@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import FormStyle from 'components/common/FormStyle'
-import FoodNameInput from './FoodFormComponents/FoodNameInput'
-import NumberInput from './FoodFormComponents/NumberInput'
+import FoodNameInput from 'components/DietPage/FoodFormComponents/FoodNameInput'
+import NumberInput from 'components/common/Form/NumberInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
 import { formcontainerStyle } from 'styles'
@@ -48,7 +48,6 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
                         labelText='Quantidade (g)'
                         setValue={setAmount}
                     />
-                    <hr />
                     <NumberInput
                         labelText='Carboidrato (g)'
                         setValue={setCarbo}

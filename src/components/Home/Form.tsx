@@ -2,7 +2,7 @@ import { useContext, useEffect, useRef, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from '../../UserInfo'
 
-import NumberInput from './FormComponents/NumberInput'
+import NumberInput from 'components/common/Form/NumberInput'
 import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
@@ -49,10 +49,10 @@ export default function Form({ setShowForm }: FormProps) {
                     navigate('/user')
                 }}>
                     <div>
-                        <NumberInput name='Altura (cm)' setValue={setHeight} />
-                        <NumberInput name='Peso' setValue={setWeight} step='0.1' />
+                        <NumberInput labelText='Altura (cm)' setValue={setHeight} />
+                        <NumberInput labelText='Peso' setValue={setWeight} step='0.1' />
                         <SexInput setSex={setSex} />
-                        <NumberInput name='Idade' setValue={setAge} />
+                        <NumberInput labelText='Idade' setValue={setAge} />
                         <ExerciseLevelInput setExerciseLevel={setExerciseLevel} />
                     </div>
                     <ConfirmButton text='Verificar' />

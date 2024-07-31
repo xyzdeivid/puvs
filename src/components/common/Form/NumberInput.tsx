@@ -1,13 +1,13 @@
-import InputContainer from '../../common/InputContainer'
-import Label from '../../common/Label'
+import InputContainer from 'components/common/InputContainer'
+import Label from 'components/common/Label'
 
 interface NumberInputProps {
-    name: string
+    labelText: string
     setValue: React.Dispatch<React.SetStateAction<number>>
     step?: string
 }
 
-export default function NumberInput({ name, setValue, step }: NumberInputProps) {
+export default function NumberInput({ labelText, setValue, step }: NumberInputProps) {
 
     const inputStyle: React.CSSProperties = {
         maxWidth: '50px',
@@ -18,7 +18,7 @@ export default function NumberInput({ name, setValue, step }: NumberInputProps) 
 
     return (
         <InputContainer>
-            <Label name={name} />
+            <Label name={labelText} />
             <input style={inputStyle} onChange={e => setValue(Number(Number(e.target.value)))} type='number' step={step ? step : '1'} required />
         </InputContainer>
     )
