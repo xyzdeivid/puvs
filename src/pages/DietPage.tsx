@@ -46,7 +46,7 @@ export default function DietPage() {
             }
             {
                 foods[0]
-                    ? <Foods />
+                    ? <Foods foods={foods} />
                     : null
             }
         </div>
