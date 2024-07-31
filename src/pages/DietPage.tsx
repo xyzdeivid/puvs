@@ -27,11 +27,17 @@ export default function DietPage() {
 
     const dailyCalorieExpenditure = functions(weight, height, age, exerciseLevel, sex).dailyCalorieExpenditure()
 
+    function dietCalouriesCounter() {
+        return foods.reduce((prev, current) => {
+            return prev + current.calories
+        }, 0)
+    }
+
     return (
         <div style={containerStyle}>
             <ul>
                 <Li index='Gasto calórico' text={`${dailyCalorieExpenditure}kcal`} />
-                <Li index='Calorias da dieta' />
+                <Li index='Calorias da dieta' text={`${dietCalouriesCounter()}kcal`} />
             </ul>
             <div>
                 <OpenFormButton
