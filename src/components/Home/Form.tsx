@@ -10,7 +10,7 @@ import ConfirmButton from 'components/common/Form/FormConfirmButton'
 import { closeForm } from 'functions/form'
 
 import { formcontainerStyle } from 'styles'
-import FormStyle from 'components/common/FormStyle'
+import FormStyle from 'components/common/Form/FormStyle'
 
 interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
