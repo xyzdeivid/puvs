@@ -1,4 +1,4 @@
-import InputContainer from '../../common/InputContainer'
+import InputContainer from '../../common/Form/InputContainer'
 import Label from '../../common/Label'
 
 import { selectStyle } from '../../../styles'

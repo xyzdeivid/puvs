@@ -1,4 +1,4 @@
-import InputContainer from 'components/common/InputContainer'
+import InputContainer from 'components/common/Form/InputContainer'
 import Label from 'components/common/Label'
 
 interface TextInputProps {
