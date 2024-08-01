@@ -9,13 +9,12 @@ export default function OpenFormButton({ setShowForm, buttonText }: OpenFormButt
 
     const buttonStyle: React.CSSProperties = {
         border: 'none',
-        fontSize: '16px',
         fontWeight: 'bold',
         backgroundColor: mainColor,
         color: 'white',
         cursor: 'pointer',
-        padding: '8px',
-        borderRadius: '8px'
+        padding: '6px',
+        borderRadius: '3px'
     }
 
     return (
