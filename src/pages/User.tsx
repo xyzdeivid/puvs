@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
 
-import Li from 'components/common/Li'
+import InfoBox from 'components/common/InfoBox'
 
 import { buttonStyle, mainColor, containerStyle } from 'styles'
 import { functions } from 'functions/user'
@@ -39,11 +39,11 @@ export default function Info() {
         <div style={containerStyle}>
             <div style={{ position: 'relative', marginBottom: '16px' }}>
                 <div style={circleStyle}></div>
-                <ul>
-                    <Li index='IMC' text={imc} />
-                    <Li index='Estimativa de gasto calórico' text={`${dailyCalorieExpenditure}kcal`} />
-                    <Li index='Sugestão de consumo de água' text={`${water}ml`} />
-                </ul>
+                <div>
+                    <InfoBox index='IMC' text={imc} />
+                    <InfoBox index='Estimativa de gasto calórico' text={`${dailyCalorieExpenditure}kcal`} />
+                    <InfoBox index='Sugestão de consumo de água' text={`${water}ml`} />
+                </div>
             </div>
             <button onClick={() => navigate('/dietpage')} style={buttonStyle}>Crie sua dieta aqui!</button>
         </div>

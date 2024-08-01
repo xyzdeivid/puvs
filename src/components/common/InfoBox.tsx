@@ -17,6 +17,6 @@ export default function Info({ index, text }: InfoProps) {
         borderBottom: `1px solid ${mainColor}`,
     }
     return (
-        <li style={listStyle}><b>{index}:</b> {text}</li>
+        <h4 style={listStyle}>{index}: <span style={{ fontWeight: 'lighter' }}>{text}</span></h4>
     )
 }
