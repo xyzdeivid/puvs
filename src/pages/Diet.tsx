@@ -5,10 +5,9 @@ import { foods } from 'types'
 import { containerStyle } from 'styles'
 
 import FoodForm from 'components/DietPage/FoodForm'
-import Foods from 'components/DietPage/Foods'
 import OpenFormButton from 'components/common/OpenFormButton'
 
-export default function DietPage() {
+export default function Diet() {
 
     const [showFoodForm, setShowFoodForm] = useState(false)
     const [foods, setFoods] = useState<foods>([])
@@ -24,11 +23,6 @@ export default function DietPage() {
             {
                 showFoodForm
                     ? <FoodForm setFoods={setFoods} setShowFoodForm={setShowFoodForm} />
-                    : null
-            }
-            {
-                foods[0]
-                    ? <Foods foods={foods} />
                     : null
             }
         </div>
