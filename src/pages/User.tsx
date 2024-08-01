@@ -45,7 +45,10 @@ export default function Info() {
                     <InfoBox index='Sugestão de consumo de água' text={`${water}ml`} />
                 </div>
             </div>
-            <button onClick={() => navigate('/dietpage')} style={buttonStyle}>Crie sua dieta aqui!</button>
+            <div>
+                <span>Crie sua dieta </span>
+                <button onClick={() => navigate('/dietpage')} style={buttonStyle}>aqui!</button>
+            </div>
         </div>
     )
 }
