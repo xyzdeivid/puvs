@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import FormStyle from 'components/common/FormStyle'
-import FoodNameInput from 'components/DietPage/FoodFormComponents/FoodNameInput'
+import TextInput from 'components/common/Form/TextInput'
 import NumberInput from 'components/common/Form/NumberInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
@@ -43,7 +43,7 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
                     e.preventDefault()
                     createFood()
                 }}>
-                    <FoodNameInput setFoodName={setName} />
+                    <TextInput labelText='Nome' setValue={setName} />
                     <NumberInput
                         labelText='Quantidade (g)'
                         setValue={setAmount}
