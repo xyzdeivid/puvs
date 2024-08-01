@@ -1,14 +1,12 @@
-import { useRef, useState } from 'react'
+import { useState } from 'react'
 
+import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import TextInput from 'components/common/Form/TextInput'
 import NumberInput from 'components/common/Form/NumberInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
-import { formcontainerStyle } from 'styles'
-
 import { foods } from 'types'
-import { closeForm } from 'functions/form'
 
 interface FoodFormProps {
     setFoods: React.Dispatch<React.SetStateAction<foods>>
@@ -37,10 +35,8 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
         setShowFoodForm(false)
     }
 
-    const formRef = useRef(null)
-
     return (
-        <div ref={formRef} onClick={e => closeForm(e, formRef, setShowFoodForm)} style={formcontainerStyle}>
+        <FormContainer setShowForm={setShowFoodForm}>
             <FormStyle>
                 <form onSubmit={e => {
                     e.preventDefault()
@@ -70,6 +66,6 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
                     <ConfirmButton text='Registrar' />
                 </form>
             </FormStyle>
-        </div>
+        </FormContainer>
     )
 }

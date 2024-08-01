@@ -27,13 +27,3 @@ export const containerStyle: React.CSSProperties = {
     justifyContent: 'center',
     alignItems: 'center'
 }
-
-export const formcontainerStyle: React.CSSProperties = {
-    position: 'absolute',
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    flexDirection: 'column',
-    width: '100vw',
-    height: '100vh'
-}
