@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
+import { foods } from 'types'
+
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import TextInput from 'components/common/Form/TextInput'
 import NumberInput from 'components/common/Form/NumberInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
-
-import { foods } from 'types'
 
 interface FoodFormProps {
     setFoods: React.Dispatch<React.SetStateAction<foods>>

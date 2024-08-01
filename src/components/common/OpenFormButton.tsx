@@ -1,4 +1,4 @@
-import { mainColor } from "styles"
+import { mainColor } from 'styles'
 
 interface OpenFormButtonProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>

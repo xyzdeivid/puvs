@@ -2,10 +2,11 @@ import { useContext } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
 
-import InfoBox from 'components/common/InfoBox'
+import { functions } from 'functions/user'
 
 import { buttonStyle, mainColor, containerStyle } from 'styles'
-import { functions } from 'functions/user'
+
+import InfoBox from 'components/common/InfoBox'
 
 export default function Info() {
 

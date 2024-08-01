@@ -1,13 +1,13 @@
 import { useContext, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { UserContext } from '../../UserInfo'
+import { UserContext } from 'UserInfo'
 
+import FormContainer from 'components/common/Form/FormContainer'
+import FormStyle from 'components/common/Form/FormStyle'
 import NumberInput from 'components/common/Form/NumberInput'
 import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
-import FormStyle from 'components/common/Form/FormStyle'
-import FormContainer from 'components/common/Form/FormContainer'
 
 interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>

@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-import FoodForm from 'components/DietPage/FoodForm'
-import Foods from 'components/DietPage/Foods'
-import OpenFormButton from 'components/common/OpenFormButton'
+import { foods } from 'types'
 
 import { containerStyle } from 'styles'
 
-import { foods } from 'types'
+import FoodForm from 'components/DietPage/FoodForm'
+import Foods from 'components/DietPage/Foods'
+import OpenFormButton from 'components/common/OpenFormButton'
 
 export default function DietPage() {
 

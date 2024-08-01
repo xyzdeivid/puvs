@@ -2,7 +2,7 @@ import { mainGradiente, mainColor } from 'styles'
 
 interface InfoProps {
     index: string
-    text?: string
+    text: string
 }
 
 export default function Info({ index, text }: InfoProps) {

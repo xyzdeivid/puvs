@@ -1,5 +1,5 @@
-import InputContainer from '../../common/Form/InputContainer'
-import Label from '../../common/Label'
+import InputContainer from 'components/common/Form/InputContainer'
+import Label from 'components/common/Label'
 
 import { selectStyle } from '../../../styles'
 
