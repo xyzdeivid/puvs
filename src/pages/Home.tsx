@@ -1,8 +1,8 @@
 import { useState } from 'react'
 
 import Container from 'components/common/Container'
-import About from 'components/Home/About'
-import Form from 'components/Home/Form'
+import About from 'components/pages/Home/About'
+import Form from 'components/pages/Home/Form'
 import OpenFormButton from 'components/common/OpenFormButton'
 
 export default function Home() {

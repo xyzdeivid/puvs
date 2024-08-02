@@ -1,7 +1,7 @@
 import InputContainer from 'components/common/Form/InputContainer'
 import Label from 'components/common/Label'
 
-import { selectStyle } from '../../../styles'
+import { selectStyle } from 'styles'
 
 interface SexInputProps {
     setSex: React.Dispatch<React.SetStateAction<string>>
