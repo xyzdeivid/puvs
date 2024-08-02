@@ -11,8 +11,9 @@ export default function NumberInput({ labelText, setValue, step }: NumberInputPr
 
     const inputStyle: React.CSSProperties = {
         maxWidth: '50px',
+        backgroundColor: '#EEEBEB',
         border: 'none',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         textAlign: 'center'
     }
 

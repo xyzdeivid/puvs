@@ -9,8 +9,9 @@ interface TextInputProps {
 export default function TextInput({ labelText, setValue }: TextInputProps) {
 
     const inputStyle: React.CSSProperties = {
+        backgroundColor: '#EEEBEB',
         border: 'none',
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+        borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         textAlign: 'center'
     }
 
