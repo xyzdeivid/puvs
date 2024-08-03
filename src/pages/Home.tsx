@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import Container from 'components/common/Container'
+import Container from 'components/pages/Home/Container'
 import About from 'components/pages/Home/About'
 import Form from 'components/pages/Home/Form'
 import OpenFormButton from 'components/common/OpenFormButton'

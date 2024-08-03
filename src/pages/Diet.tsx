@@ -2,8 +2,7 @@ import { useState } from 'react'
 
 import { foods } from 'types'
 
-import { containerStyle } from 'styles'
-
+import Container from 'components/common/Container'
 import FoodForm from 'components/pages/Diet/FoodForm'
 import OpenFormButton from 'components/common/OpenFormButton'
 
@@ -13,7 +12,7 @@ export default function Diet() {
     const [foods, setFoods] = useState<foods>([])
 
     return (
-        <div style={containerStyle}>
+        <Container>
             <div>
                 <OpenFormButton
                     setShowForm={setShowFoodForm}
@@ -25,6 +24,6 @@ export default function Diet() {
                     ? <FoodForm setFoods={setFoods} setShowFoodForm={setShowFoodForm} />
                     : null
             }
-        </div>
+        </Container>
     )
 }
