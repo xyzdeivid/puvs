@@ -7,7 +7,7 @@ interface DietFoodsProps {
 export default function DietFoods({ foods }: DietFoodsProps) {
 
     return (
-        <ul style={{ listStyle: 'none' }}>
+        <ul>
             {foods.map(food => {
                 return (
                     <li>{food.name}</li>
