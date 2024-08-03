@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { foods } from 'types'
 
 import Container from 'components/common/Container'
+import FoodsList from 'components/pages/Diet/FoodsList'
 import FoodForm from 'components/pages/Diet/FoodForm'
 import OpenFormButton from 'components/common/OpenFormButton'
 
@@ -13,6 +14,7 @@ export default function Diet() {
 
     return (
         <Container>
+            <FoodsList foods={foods} />
             <div>
                 <OpenFormButton
                     setShowForm={setShowFoodForm}
