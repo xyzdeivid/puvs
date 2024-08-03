@@ -26,9 +26,9 @@ export default function NutrientMeasurements({ foods }: NutrientMeasurementsProp
 
     return (
         <ul>
-            <li>Carboidratos: {carboMeasurement()}g</li>
-            <li>Proteínas: {protMeasurement()}g</li>
-            <li>Gorduras: {fatMeasurement()}g</li>
+            <li><span style={{ fontWeight: 'bolder' }}>Carboidratos:</span> {carboMeasurement()}g</li>
+            <li><span style={{ fontWeight: 'bolder' }}>Proteínas:</span> {protMeasurement()}g</li>
+            <li><span style={{ fontWeight: 'bolder' }}>Gorduras:</span> {fatMeasurement()}g</li>
         </ul>
     )
 
