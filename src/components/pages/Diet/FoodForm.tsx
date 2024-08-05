@@ -50,14 +50,17 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
                     <NumberInput
                         labelText='Carboidrato (g)'
                         setValue={setCarbo}
+                        step='0.1'
                     />
                     <NumberInput
                         labelText='Proteína (g)'
                         setValue={setProt}
+                        step='0.1'
                     />
                     <NumberInput
                         labelText='Gordura (g)'
                         setValue={setFat}
+                        step='0.1'
                     />
                     <NumberInput
                         labelText='Calorias (kcal)'

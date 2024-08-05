@@ -24,11 +24,15 @@ export default function NutrientMeasurements({ foods }: NutrientMeasurementsProp
         }, 0)
     }
 
+    const listStyle: React.CSSProperties = {
+        fontSize: '14px'
+    }
+
     return (
         <ul>
-            <li><span style={{ fontWeight: 'bolder' }}>Carboidratos:</span> {carboMeasurement()}g</li>
-            <li><span style={{ fontWeight: 'bolder' }}>Proteínas:</span> {protMeasurement()}g</li>
-            <li><span style={{ fontWeight: 'bolder' }}>Gorduras:</span> {fatMeasurement()}g</li>
+            <li style={listStyle}><span style={{ fontWeight: 'bolder' }}>Carboidratos:</span> {carboMeasurement()}g</li>
+            <li style={listStyle}><span style={{ fontWeight: 'bolder' }}>Proteínas:</span> {protMeasurement()}g</li>
+            <li style={listStyle}><span style={{ fontWeight: 'bolder' }}>Gorduras:</span> {fatMeasurement()}g</li>
         </ul>
     )
 
