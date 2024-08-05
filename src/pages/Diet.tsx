@@ -5,22 +5,22 @@ import { foods } from 'types'
 import Container from 'components/common/Container'
 import OpenFormButton from 'components/common/OpenFormButton'
 import Foods from 'components/pages/Diet/Foods'
-import FoodForm from 'components/pages/Diet/FoodForm'
+import FoodOptionsForm from 'components/pages/Diet/FoodOptionsForm'
 
 export default function Diet() {
 
-    const [showFoodForm, setShowFoodForm] = useState(false)
+    const [showFoodOptionsForm, setFoodOptionsForm] = useState(false)
     const [foods, setFoods] = useState<foods>([])
 
     return (
         <Container>
             <OpenFormButton
-                setShowForm={setShowFoodForm}
+                setShowForm={setFoodOptionsForm}
                 buttonText='Adicionar Alimento'
             />
             {
-                showFoodForm
-                    ? <FoodForm setFoods={setFoods} setShowFoodForm={setShowFoodForm} />
+                showFoodOptionsForm
+                    ? <FoodOptionsForm setFoodOptionsForm={setFoodOptionsForm} />
                     : null
             }
             {
