@@ -1,4 +1,4 @@
-import InputContainer from 'components/common/Form/InputContainer'
+import InputContainer from 'components/common/Form/inputs/InputContainer'
 import Label from 'components/common/Label'
 
 interface SelectInputProps {

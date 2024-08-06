@@ -4,7 +4,7 @@ import { UserContext } from 'UserInfo'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
-import NumberInput from 'components/common/Form/NumberInput'
+import NumberInput from 'components/common/Form/inputs/NumberInput'
 import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
