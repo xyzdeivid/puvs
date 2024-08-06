@@ -3,10 +3,11 @@ import Label from 'components/common/Label'
 
 interface SelectInputProps {
     labelText: string
-    optionsName: string[]
+    optionsName: string[][]
+    setValue: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function SelectInput({ labelText, optionsName }: SelectInputProps) {
+export default function SelectInput({ labelText, optionsName, setValue }: SelectInputProps) {
 
     const selectStyle: React.CSSProperties = {
         border: 'none',
@@ -19,10 +20,12 @@ export default function SelectInput({ labelText, optionsName }: SelectInputProps
     return (
         <InputContainer>
             <Label name={labelText} />
-            <select style={selectStyle}>
+            <select style={selectStyle} onChange={e => setValue(e.target.value)}>
                 {optionsName.map(option => {
                     return (
-                        <option>{option}</option>
+                        <option key={option[0]} value={option[0]}>
+                            {option[1]}
+                        </option>
                     )
                 })}
             </select>

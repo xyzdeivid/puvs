@@ -5,9 +5,9 @@ import { UserContext } from 'UserInfo'
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import NumberInput from 'components/common/Form/inputs/NumberInput'
-import SexInput from './FormComponents/SexInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
+import SelectInput from 'components/common/Form/inputs/SelectInput'
 
 interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -33,6 +33,11 @@ export default function Form({ setShowForm }: FormProps) {
 
     const navigate = useNavigate()
 
+    const sexOptions = [
+        ['m', 'Masculino'],
+        ['f', 'Feminino']
+    ]
+
     return (
         <FormContainer setShowForm={setShowForm}>
             <FormStyle>
@@ -43,7 +48,7 @@ export default function Form({ setShowForm }: FormProps) {
                     <div>
                         <NumberInput labelText='Altura (cm)' setValue={setHeight} />
                         <NumberInput labelText='Peso' setValue={setWeight} step='0.1' />
-                        <SexInput setSex={setSex} />
+                        <SelectInput labelText='Sexo' optionsName={sexOptions} setValue={setSex} />
                         <NumberInput labelText='Idade' setValue={setAge} />
                         <ExerciseLevelInput setExerciseLevel={setExerciseLevel} />
                     </div>
