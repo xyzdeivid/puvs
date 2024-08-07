@@ -29,6 +29,7 @@ export default function FoodOptionsForm({ setFoodOptionsForm }: FoodOptionsFormP
                     <NumberInput
                         labelText='Quantidade (g)'
                         setValue={setAmount}
+                        value={amount}
                     />
                     <hr />
                     <FoodInfo />

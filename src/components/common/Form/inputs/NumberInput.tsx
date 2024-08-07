@@ -4,10 +4,11 @@ import Label from 'components/common/Label'
 interface NumberInputProps {
     labelText: string
     setValue: React.Dispatch<React.SetStateAction<number>>
+    value?: number
     step?: string
 }
 
-export default function NumberInput({ labelText, setValue, step }: NumberInputProps) {
+export default function NumberInput({ labelText, setValue, value, step }: NumberInputProps) {
 
     const inputStyle: React.CSSProperties = {
         maxWidth: '50px',
@@ -20,7 +21,7 @@ export default function NumberInput({ labelText, setValue, step }: NumberInputPr
     return (
         <InputContainer>
             <Label name={labelText} />
-            <input style={inputStyle} onChange={e => setValue(Number(Number(e.target.value)))} type='number' step={step ? step : '1'} required />
+            <input style={inputStyle} value={value ? value : undefined} onChange={e => setValue(Number(Number(e.target.value)))} type='number' step={step ? step : '1'} required />
         </InputContainer>
     )
 }
