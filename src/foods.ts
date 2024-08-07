@@ -57,3 +57,31 @@ export const carbohydrates: food[] = [
     }
 
 ]
+
+export const proteins: food[] = [
+
+    {
+        name: 'Peito de Frango (Cru)',
+        carbohydrate: 0,
+        protein: 0.23,
+        fat: 0.02,
+        calories: 1.1
+    },
+
+    {
+        name: 'Ovo (Cru)',
+        carbohydrate: 0.007,
+        protein: 0.12,
+        fat: 0.1,
+        calories: 1.4
+    },
+
+    {
+        name: 'Leite Integral',
+        carbohydrate: 0.05,
+        protein: 0.03,
+        fat: 0.04,
+        calories: 0.64
+    }
+
+]

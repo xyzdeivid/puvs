@@ -1,7 +1,7 @@
 import InputContainer from 'components/common/Form/inputs/InputContainer'
 import Label from 'components/common/Label'
 
-import { carbohydrates } from 'foods'
+import { carbohydrates, proteins } from 'foods'
 
 import { selectStyle } from 'styles'
 
@@ -19,6 +19,14 @@ export default function FoodOptionsInput({ source }: FoodOptionsInputProps) {
                         <option>{food.name}</option>
                     )
                 }))
+            )
+        } else if (source === 'protein') {
+            return (
+                proteins.map((food) => {
+                    return (
+                        <option>{food.name}</option>
+                    )
+                })
             )
         }
     }

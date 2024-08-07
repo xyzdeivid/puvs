@@ -10,7 +10,7 @@ interface FoodOptionsFormProps {
 
 export default function FoodOptionsForm({ setFoodOptionsForm }: FoodOptionsFormProps) {
 
-    const [source, setSource] = useState('')
+    const [source, setSource] = useState('carbohydrate')
 
     return (
         <FormContainer setShowForm={setFoodOptionsForm}>
