@@ -7,7 +7,8 @@ import FormStyle from 'components/common/Form/FormStyle'
 import NumberInput from 'components/common/Form/inputs/NumberInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
-import SelectInput from 'components/common/Form/inputs/SelectInput'
+import StringSelectInput from 'components/common/Form/inputs/StringSelectInput'
+import { StringSelectInputValues } from 'types'
 
 interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -33,7 +34,7 @@ export default function Form({ setShowForm }: FormProps) {
 
     const navigate = useNavigate()
 
-    const sexOptions = [
+    const sexOptions: StringSelectInputValues = [
         ['m', 'Masculino'],
         ['f', 'Feminino']
     ]
@@ -48,7 +49,7 @@ export default function Form({ setShowForm }: FormProps) {
                     <div>
                         <NumberInput labelText='Altura (cm)' setValue={setHeight} />
                         <NumberInput labelText='Peso' setValue={setWeight} step='0.1' />
-                        <SelectInput labelText='Sexo' optionsName={sexOptions} setValue={setSex} />
+                        <StringSelectInput labelText='Sexo' optionsName={sexOptions} setValue={setSex} />
                         <NumberInput labelText='Idade' setValue={setAge} />
                         <ExerciseLevelInput setExerciseLevel={setExerciseLevel} />
                     </div>

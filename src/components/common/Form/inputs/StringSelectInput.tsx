@@ -1,9 +1,11 @@
 import InputContainer from 'components/common/Form/inputs/InputContainer'
 import Label from 'components/common/Label'
 
+import { StringSelectInputValues } from 'types'
+
 interface SelectInputProps {
     labelText: string
-    optionsName: string[][]
+    optionsName: StringSelectInputValues
     setValue: React.Dispatch<React.SetStateAction<string>>
 }
 

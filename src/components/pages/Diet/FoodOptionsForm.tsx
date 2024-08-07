@@ -1,6 +1,6 @@
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
-import SelectInput from 'components/common/Form/inputs/SelectInput'
+import StringSelectInput from 'components/common/Form/inputs/StringSelectInput'
 import { useState } from 'react'
 
 interface FoodOptionsFormProps {
@@ -15,7 +15,7 @@ export default function FoodOptionsForm({ setFoodOptionsForm }: FoodOptionsFormP
         <FormContainer setShowForm={setFoodOptionsForm}>
             <FormStyle>
                 <form>
-                    <SelectInput
+                    <StringSelectInput
                         labelText='Fonte'
                         optionsName={[['carbohydrate', 'Carboidratos'], ['protein', 'Proteínas']]}
                         setValue={setSource}
