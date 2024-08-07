@@ -3,6 +3,7 @@ import FormStyle from 'components/common/Form/FormStyle'
 import StringSelectInput from 'components/common/Form/inputs/StringSelectInput'
 import { useState } from 'react'
 import FoodOptionsInput from './FoodOptionsForm/FoodOptionsInput'
+import NumberInput from 'components/common/Form/inputs/NumberInput'
 
 interface FoodOptionsFormProps {
     setFoodOptionsForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -11,6 +12,7 @@ interface FoodOptionsFormProps {
 export default function FoodOptionsForm({ setFoodOptionsForm }: FoodOptionsFormProps) {
 
     const [source, setSource] = useState('carbohydrate')
+    const [amount, setAmount] = useState(100)
 
     return (
         <FormContainer setShowForm={setFoodOptionsForm}>
@@ -22,6 +24,11 @@ export default function FoodOptionsForm({ setFoodOptionsForm }: FoodOptionsFormP
                         setValue={setSource}
                     />
                     <FoodOptionsInput source={source} />
+                    <NumberInput
+                        labelText='Quantidade (g)'
+                        setValue={setAmount}
+                    />
+                    <hr />
                 </form>
             </FormStyle>
         </FormContainer>
