@@ -6,7 +6,7 @@ interface food {
     calories: number
 }
 
-const carbohydrates: food[] = [
+export const carbohydrates: food[] = [
 
     {
         name: 'Arroz Branco (Cozido)',
@@ -57,7 +57,3 @@ const carbohydrates: food[] = [
     }
 
 ]
-
-export const foods = {
-    carbohydratesSources: carbohydrates
-}
