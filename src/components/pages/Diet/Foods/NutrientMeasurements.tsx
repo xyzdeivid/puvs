@@ -8,13 +8,13 @@ export default function NutrientMeasurements({ foods }: NutrientMeasurementsProp
 
     function carboMeasurement() {
         return foods.reduce((prev, current) => {
-            return prev + current.carbo
+            return prev + current.carbohydrate
         }, 0)
     }
 
     function protMeasurement() {
         return foods.reduce((prev, current) => {
-            return prev + current.prot
+            return prev + current.protein
         }, 0)
     }
 

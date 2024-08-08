@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { foods } from 'types'
+import { food, foods } from 'types'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
@@ -16,18 +16,16 @@ interface FoodFormProps {
 export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
 
     const [name, setName] = useState('')
-    const [amount, setAmount] = useState(0)
-    const [carbo, setCarbo] = useState(0)
-    const [prot, setProt] = useState(0)
+    const [carbohydrate, setCarbohydrate] = useState(0)
+    const [protein, setProtein] = useState(0)
     const [fat, setFat] = useState(0)
     const [calories, setCalories] = useState(0)
 
     function createFood() {
-        const food = {
+        const food: food = {
             name,
-            amount,
-            carbo,
-            prot,
+            carbohydrate,
+            protein,
             fat,
             calories
         }
@@ -44,17 +42,13 @@ export default function FoodForm({ setFoods, setShowFoodForm }: FoodFormProps) {
                 }}>
                     <TextInput labelText='Nome' setValue={setName} />
                     <NumberInput
-                        labelText='Quantidade (g)'
-                        setValue={setAmount}
-                    />
-                    <NumberInput
                         labelText='Carboidrato (g)'
-                        setValue={setCarbo}
+                        setValue={setCarbohydrate}
                         step='0.1'
                     />
                     <NumberInput
                         labelText='Proteína (g)'
-                        setValue={setProt}
+                        setValue={setProtein}
                         step='0.1'
                     />
                     <NumberInput

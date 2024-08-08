@@ -1,8 +1,7 @@
-interface food {
+export interface food {
     name: string
-    amount: number
-    carbo: number
-    prot: number
+    carbohydrate: number
+    protein: number
     fat: number
     calories: number
 }

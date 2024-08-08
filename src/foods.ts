@@ -1,10 +1,4 @@
-interface food {
-    name: string
-    carbohydrate: number
-    protein: number
-    fat: number
-    calories: number
-}
+import { food } from 'types'
 
 export const carbohydrates: food[] = [
 
