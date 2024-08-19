@@ -4,10 +4,12 @@ import { UserContext } from 'UserInfo'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
-import NumberInput from 'components/common/Form/inputs/NumberInput'
+import HeightInput from './FormComponents/HeightInput'
+import StringSelectInput from 'components/common/Form/inputs/StringSelectInput'
+import WeightInput from './FormComponents/WeightInput'
+import AgeInput from './FormComponents/AgeInput'
 import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
-import StringSelectInput from 'components/common/Form/inputs/StringSelectInput'
 import { StringSelectInputValues } from 'types'
 
 interface FormProps {
@@ -47,10 +49,10 @@ export default function Form({ setShowForm }: FormProps) {
                     navigate('/user')
                 }}>
                     <div>
-                        <NumberInput labelText='Altura (cm)' setValue={setHeight} />
-                        <NumberInput labelText='Peso' setValue={setWeight} step='0.1' />
+                        <HeightInput setHeight={setHeight} />
+                        <WeightInput setWeight={setWeight} />
                         <StringSelectInput labelText='Sexo' optionsName={sexOptions} setValue={setSex} />
-                        <NumberInput labelText='Idade' setValue={setAge} />
+                        <AgeInput setAge={setAge} />
                         <ExerciseLevelInput setExerciseLevel={setExerciseLevel} />
                     </div>
                     <ConfirmButton text='Verificar' />
