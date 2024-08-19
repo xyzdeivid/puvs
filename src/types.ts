@@ -7,5 +7,3 @@ export interface food {
 }
 
 export type foods = food[]
-
-export type StringSelectInputValues = [string, string][]
