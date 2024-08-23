@@ -14,7 +14,7 @@ export default function Info() {
             <UserInformation />
             <div>
                 <span>Crie sua dieta </span>
-                <button onClick={() => navigate('/dietpage')} style={buttonStyle}>aqui!</button>
+                <button onClick={() => navigate('/diet')} style={buttonStyle}>aqui!</button>
             </div>
         </Container>
     )
