@@ -10,6 +10,14 @@ export const selectStyle: React.CSSProperties = {
     borderRadius: '1px'
 }
 
+export const numberInputStyle: React.CSSProperties = {
+    maxWidth: '50px',
+    backgroundColor: '#EEEBEB',
+    border: 'none',
+    borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
+    textAlign: 'center'
+}
+
 export const buttonStyle: React.CSSProperties = {
     border: 'none',
     fontSize: '16px',
