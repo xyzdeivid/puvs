@@ -1,6 +1,6 @@
-import { food } from 'types'
+import { Foods } from 'types'
 
-export const carbohydrates: food[] = [
+export const carbohydrates: Foods = [
 
     {
         name: 'Arroz Branco (Cozido)',
@@ -52,7 +52,7 @@ export const carbohydrates: food[] = [
 
 ]
 
-export const proteins: food[] = [
+export const proteins: Foods = [
 
     {
         name: 'Peito de Frango (Cru)',

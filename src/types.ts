@@ -1,4 +1,4 @@
-export interface food {
+export interface Food {
     name: string
     carbohydrate: number
     protein: number
@@ -6,4 +6,4 @@ export interface food {
     calories: number
 }
 
-export type foods = food[]
+export type Foods = Food[]
