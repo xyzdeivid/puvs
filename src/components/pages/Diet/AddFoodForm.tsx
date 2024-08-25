@@ -1,4 +1,6 @@
-import { useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
+
+import { Food } from 'types'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
@@ -16,15 +18,20 @@ interface AddFoodFormProps {
 export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
 
     const [source, setSource] = useState('carbo')
+    const [food, setFood] = useState({} as Food)
 
     function sourceHandler() {
         if (source === 'carbo') {
-            return <CarboOptionsInput />
+            return <CarboOptionsInput setDefaultFood={setDefaultFood} />
         }
         if (source === 'prot') {
-            return <ProtOptionsInput />
+            return <ProtOptionsInput setDefaultFood={setDefaultFood} />
         }
     }
+
+    const setDefaultFood = useCallback((food: Food) => {
+        setFood(food)
+    }, [])
 
     return (
         <FormContainer setShowForm={setShowAddFoodForm}>
