@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState } from 'react'
+import { useCallback, useState } from 'react'
 
 import { Food } from 'types'
 
@@ -22,10 +22,10 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
 
     function sourceHandler() {
         if (source === 'carbo') {
-            return <CarboOptionsInput setDefaultFood={setDefaultFood} />
+            return <CarboOptionsInput setDefaultFood={setDefaultFood} setFood={setFood} />
         }
         if (source === 'prot') {
-            return <ProtOptionsInput setDefaultFood={setDefaultFood} />
+            return <ProtOptionsInput setDefaultFood={setDefaultFood} setFood={setFood} />
         }
     }
 
