@@ -9,7 +9,7 @@ import InputContainer from 'components/common/Form/inputs/InputContainer'
 import Label from 'components/common/Label'
 import CarboOptionsInput from './AddFoodForm/CarboOptionsInput'
 import ProtOptionsInput from './AddFoodForm/ProtOptionsInput'
-import AmountInput from './AddFoodForm/AmountInput'
+import FoodInformation from './AddFoodForm/FoodInformation'
 
 interface AddFoodFormProps {
     setShowAddFoodForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -42,7 +42,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
                         <Label name='Alimento' />
                         {sourceHandler()}
                     </InputContainer>
-                    <AmountInput />
+                    <FoodInformation food={food} />
                 </form>
             </FormStyle>
         </FormContainer>
