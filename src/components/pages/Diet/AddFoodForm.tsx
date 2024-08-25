@@ -1,11 +1,12 @@
-import { useEffect, useState } from 'react'
-
-import { carbohydrates, proteins } from 'foods'
+import { useState } from 'react'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import SourceInput from './AddFoodForm/SourceInput'
-import FoodOptions from './AddFoodForm/FoodOptions'
+import InputContainer from 'components/common/Form/inputs/InputContainer'
+import Label from 'components/common/Label'
+import CarboOptionsInput from './AddFoodForm/CarboOptionsInput'
+import ProtOptionsInput from './AddFoodForm/ProtOptionsInput'
 import AmountInput from './AddFoodForm/AmountInput'
 
 interface AddFoodFormProps {
@@ -15,23 +16,25 @@ interface AddFoodFormProps {
 export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
 
     const [source, setSource] = useState('carbo')
-    const [foods, setFoods] = useState(carbohydrates)
 
-    useEffect(() => {
+    function sourceHandler() {
         if (source === 'carbo') {
-            setFoods(carbohydrates)
+            return <CarboOptionsInput />
         }
         if (source === 'prot') {
-            setFoods(proteins)
+            return <ProtOptionsInput />
         }
-    }, [source])
+    }
 
     return (
         <FormContainer setShowForm={setShowAddFoodForm}>
             <FormStyle>
                 <form>
                     <SourceInput setSource={setSource} />
-                    <FoodOptions foods={foods} />
+                    <InputContainer>
+                        <Label name='Alimento' />
+                        {sourceHandler()}
+                    </InputContainer>
                     <AmountInput />
                 </form>
             </FormStyle>
