@@ -13,7 +13,7 @@ export default function FoodsList({ dietFoods }: FoodsListProps) {
     return (
         <div>
             <List dietFoods={dietFoods} />
-            <CentralInformation />
+            <CentralInformation dietFoods={dietFoods} />
             <hr style={{ margin: '16px 0' }} />
         </div>
     )
