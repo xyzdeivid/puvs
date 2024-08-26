@@ -1,10 +1,12 @@
-import { Foods } from 'types'
+import { Food, Foods } from 'types'
 
 interface ListProps {
     dietFoods: Foods
+    setSelectedFood: React.Dispatch<React.SetStateAction<Food>>
+    setShowInfoCard: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function List({ dietFoods }: ListProps) {
+export default function List({ dietFoods, setSelectedFood, setShowInfoCard }: ListProps) {
 
     const listStyle: React.CSSProperties = {
         display: 'flex',
@@ -12,7 +14,8 @@ export default function List({ dietFoods }: ListProps) {
     }
 
     const infoStyle: React.CSSProperties = {
-        fontWeight: 'bolder'
+        fontWeight: 'bolder',
+        cursor: 'pointer'
     }
 
 
@@ -22,7 +25,10 @@ export default function List({ dietFoods }: ListProps) {
                 return (
                     <li style={listStyle} key={food.name}>
                         <span style={{ marginRight: '8px' }}>{food.name}</span>
-                        <span style={infoStyle}>Info</span>
+                        <span onClick={() => {
+                            setSelectedFood(food)
+                            setShowInfoCard(true)
+                        }} style={infoStyle}>Info</span>
                     </li>
                 )
             })}
