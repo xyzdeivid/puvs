@@ -7,6 +7,7 @@ import FormStyle from 'components/common/Form/FormStyle'
 import SourceInput from './AddFoodForm/SourceInput'
 import FoodOptionsInput from './AddFoodForm/FoodOptionsInput'
 import FoodInformation from './AddFoodForm/FoodInformation'
+import AmountInput from './AddFoodForm/AmountInput'
 
 interface AddFoodFormProps {
     setShowAddFoodForm: React.Dispatch<React.SetStateAction<boolean>>
@@ -31,6 +32,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
                         setDefaultFood={setDefaultFood}
                         setFood={setFood}
                     />
+                    <AmountInput />
                     <FoodInformation food={food} />
                 </form>
             </FormStyle>
