@@ -7,12 +7,18 @@ interface FoodInformationProps {
 
 export default function FoodInformation({ food, amount }: FoodInformationProps) {
 
+    function checkFractionDigit(number: number) {
+        return number % 1 !== 0
+        ? number.toFixed(1)
+        : number.toFixed(0)
+    }
+
     return (
         <ul>
-            <li>Carboidrato: {(food.carbohydrate * amount).toFixed(1)}g</li>
-            <li>Proteína: {(food.protein * amount).toFixed(1)}g</li>
-            <li>Gordura: {(food.fat * amount).toFixed(1)}g</li>
-            <li>Calorias: {(food.calories * amount).toFixed(1)}kcal</li>
+            <li>Carboidrato: {checkFractionDigit(food.carbohydrate * amount)}g</li>
+            <li>Proteína: {checkFractionDigit(food.protein * amount)}g</li>
+            <li>Gordura: {checkFractionDigit(food.fat * amount)}g</li>
+            <li>Calorias: {checkFractionDigit(food.calories * amount)}kcal</li>
         </ul>
     )
 
