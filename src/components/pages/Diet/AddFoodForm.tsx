@@ -50,6 +50,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
                         setFood={setFood}
                     />
                     <AmountInput amount={amount} setAmount={setAmount} />
+                    <hr style={{ marginBottom: '16px' }} />
                     <FoodInformation food={food} amount={amount} />
                     <FormConfirmButton text='Confirmar' />
                 </form>
