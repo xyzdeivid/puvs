@@ -1,5 +1,4 @@
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import Label from 'components/common/Label'
 
 import { selectStyle } from 'styles'
 
@@ -18,8 +17,7 @@ export default function ExerciseLevelInput({ setExerciseLevel }: ExerciseLevelIn
     ]
 
     return (
-        <InputContainer>
-            <Label name='Nível de atividade física' />
+        <InputContainer labelText='Nível de atividade física'>
             <select style={selectStyle} onChange={e => setExerciseLevel(Number(e.target.value))}>
                 {options.map(option => {
                     return (

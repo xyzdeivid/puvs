@@ -1,7 +1,6 @@
 import { Food } from 'types'
 
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import Label from 'components/common/Label'
 import CarboOptionsInput from './FoodOptionsInput/CarboOptionsInput'
 import ProtOptionsInput from './FoodOptionsInput/ProtOptionsInput'
 
@@ -23,8 +22,7 @@ export default function FoodOptionsInput({ source, setDefaultFood, setFood }: Fo
     }
 
     return (
-        <InputContainer>
-            <Label name='Alimento' />
+        <InputContainer labelText='Alimento'>
             {sourceHandler()}
         </InputContainer>
     )

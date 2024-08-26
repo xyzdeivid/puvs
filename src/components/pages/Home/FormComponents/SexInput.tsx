@@ -1,5 +1,4 @@
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import Label from 'components/common/Label'
 
 import { selectStyle } from 'styles'
 
@@ -15,8 +14,7 @@ export default function SexInput({ setSex }: SexInputProps) {
     ]
 
     return (
-        <InputContainer>
-            <Label name='Sexo' />
+        <InputContainer labelText='Sexo'>
             <select style={selectStyle} onChange={e => setSex(e.target.value)}>
                 {options.map(option => {
                     return (

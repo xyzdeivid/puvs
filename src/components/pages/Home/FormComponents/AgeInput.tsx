@@ -1,7 +1,6 @@
 import { numberInputStyle } from 'styles'
 
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import Label from 'components/common/Label'
 
 interface AgeInputProps {
     setAge: React.Dispatch<React.SetStateAction<number>>
@@ -10,8 +9,7 @@ interface AgeInputProps {
 export default function AgeInput({ setAge }: AgeInputProps) {
 
     return (
-        <InputContainer>
-            <Label name='Idade' />
+        <InputContainer labelText='Idade'>
             <input style={numberInputStyle} onChange={e => setAge(Number(Number(e.target.value)))} type='number' required />
         </InputContainer>
     )

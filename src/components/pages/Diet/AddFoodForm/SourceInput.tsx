@@ -1,5 +1,4 @@
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import Label from 'components/common/Label'
 
 import { selectStyle } from 'styles'
 
@@ -14,8 +13,7 @@ export default function SourceInput({ setSource }: SourceInputProps) {
     }
 
     return (
-        <InputContainer>
-            <Label name='Fonte' />
+        <InputContainer labelText='Fonte'>
             <select onChange={e => sourceHandler(e.target.value)} style={selectStyle}>
                 <option value='carbo'>Carboidrato</option>
                 <option value='prot'>Proteína</option>
