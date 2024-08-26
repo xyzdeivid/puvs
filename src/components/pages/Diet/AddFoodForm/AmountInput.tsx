@@ -3,12 +3,16 @@ import { numberInputStyle } from 'styles'
 import InputContainer from 'components/common/Form/inputs/InputContainer'
 import Label from 'components/common/Label'
 
-export default function AmountInput() {
+interface AmountInputProps {
+    amount: number
+}
+
+export default function AmountInput({ amount }: AmountInputProps) {
 
     return (
         <InputContainer>
             <Label name='Quantidade (g)' />
-            <input style={numberInputStyle} type='number' />
+            <input defaultValue={amount} style={numberInputStyle} type='number' />
         </InputContainer>
     )
 

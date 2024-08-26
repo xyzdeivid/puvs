@@ -17,6 +17,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
 
     const [source, setSource] = useState('carbo')
     const [food, setFood] = useState({} as Food)
+    const [amount, setAmount] = useState(100)
 
     const setDefaultFood = useCallback((food: Food) => {
         setFood(food)
@@ -32,8 +33,8 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
                         setDefaultFood={setDefaultFood}
                         setFood={setFood}
                     />
-                    <AmountInput />
-                    <FoodInformation food={food} />
+                    <AmountInput amount={amount} />
+                    <FoodInformation food={food} amount={amount} />
                 </form>
             </FormStyle>
         </FormContainer>
