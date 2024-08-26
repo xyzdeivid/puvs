@@ -1,6 +1,6 @@
 import { useCallback, useState } from 'react'
 
-import { Food } from 'types'
+import { Food, Foods } from 'types'
 
 import FormContainer from 'components/common/Form/FormContainer'
 import FormStyle from 'components/common/Form/FormStyle'
@@ -11,10 +11,11 @@ import AmountInput from './AddFoodForm/AmountInput'
 import FormConfirmButton from 'components/common/Form/FormConfirmButton'
 
 interface AddFoodFormProps {
+    setDietFoods: React.Dispatch<React.SetStateAction<Foods>>
     setShowAddFoodForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
+export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoodFormProps) {
 
     const [source, setSource] = useState('carbo')
     const [food, setFood] = useState({} as Food)
@@ -32,7 +33,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
             fat: food.fat * amount,
             calories: food.calories * amount
         }
-        console.log(createdFood)
+        setDietFoods(prev => [...prev, createdFood])
     }
 
     return (
