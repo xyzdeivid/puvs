@@ -33,7 +33,7 @@ export default function AddFoodForm({ setShowAddFoodForm }: AddFoodFormProps) {
                         setDefaultFood={setDefaultFood}
                         setFood={setFood}
                     />
-                    <AmountInput amount={amount} />
+                    <AmountInput amount={amount} setAmount={setAmount} />
                     <FoodInformation food={food} amount={amount} />
                 </form>
             </FormStyle>
