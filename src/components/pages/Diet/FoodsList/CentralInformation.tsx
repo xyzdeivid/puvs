@@ -4,7 +4,7 @@ interface CentralInformationProps {
     dietFoods: Foods
 }
 
-export default function CentralInformation({ dietFoods }: CentralInformationProps) {
+const CentralInformation = ({ dietFoods }: CentralInformationProps) => {
 
     function carboCounter() {
         const totalCarbo = dietFoods.reduce((acc, current) => {
@@ -44,3 +44,5 @@ export default function CentralInformation({ dietFoods }: CentralInformationProp
     )
 
 }
+
+export default CentralInformation

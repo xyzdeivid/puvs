@@ -15,7 +15,7 @@ interface FormProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function Form({ setShowForm }: FormProps) {
+const Form = ({ setShowForm }: FormProps) => {
 
     const user = useContext(UserContext)
     const [, setHeight] = user.height
@@ -55,3 +55,5 @@ export default function Form({ setShowForm }: FormProps) {
         </PopUpContainer>
     )
 }
+
+export default Form

@@ -6,7 +6,7 @@ interface ListProps {
     setShowInfoCard: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function List({ dietFoods, setSelectedFood, setShowInfoCard }: ListProps) {
+const List = ({ dietFoods, setSelectedFood, setShowInfoCard }: ListProps) => {
 
     const listStyle: React.CSSProperties = {
         display: 'flex',
@@ -35,3 +35,5 @@ export default function List({ dietFoods, setSelectedFood, setShowInfoCard }: Li
         </ul>
     )
 }
+
+export default List

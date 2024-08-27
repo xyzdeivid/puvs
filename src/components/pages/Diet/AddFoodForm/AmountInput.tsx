@@ -7,7 +7,7 @@ interface AmountInputProps {
     setAmount: React.Dispatch<React.SetStateAction<number>>
 }
 
-export default function AmountInput({ amount, setAmount }: AmountInputProps) {
+const AmountInput = ({ amount, setAmount }: AmountInputProps) => {
 
     return (
         <InputContainer labelText='Quantidade (g)'>
@@ -16,3 +16,5 @@ export default function AmountInput({ amount, setAmount }: AmountInputProps) {
     )
 
 }
+
+export default AmountInput

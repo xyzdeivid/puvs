@@ -1,11 +1,11 @@
 import { useRef } from 'react'
 
-interface FormContainerProps {
+interface PopUpContainerProps {
     setShowForm: React.Dispatch<React.SetStateAction<boolean>>
     children: React.ReactNode
 }
 
-export default function FormContainer({ setShowForm, children }: FormContainerProps) {
+const PopUpContainer = ({ setShowForm, children }: PopUpContainerProps) => {
 
     const formRef = useRef(null)
 
@@ -17,7 +17,7 @@ export default function FormContainer({ setShowForm, children }: FormContainerPr
         }
     }
 
-    const formcontainerStyle: React.CSSProperties = {
+    const popUpContainerStyle: React.CSSProperties = {
         position: 'absolute',
         display: 'flex',
         justifyContent: 'center',
@@ -28,8 +28,10 @@ export default function FormContainer({ setShowForm, children }: FormContainerPr
     }
 
     return (
-        <div ref={formRef} onClick={e => closeForm(e)} style={formcontainerStyle}>
+        <div ref={formRef} onClick={e => closeForm(e)} style={popUpContainerStyle}>
             {children}
         </div>
     )
 }
+
+export default PopUpContainer

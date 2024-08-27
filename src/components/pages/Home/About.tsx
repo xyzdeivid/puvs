@@ -1,6 +1,6 @@
 import { mainColor } from 'styles'
 
-export default function About() {
+const About = () => {
     return (
         <div style={{ marginBottom: '16px', padding: '8px' }}>
             <h1 style={{ marginBottom: '4px', color: mainColor }}>Sobre o PUVS</h1>
@@ -14,3 +14,5 @@ export default function About() {
         </div>
     )
 }
+
+export default About

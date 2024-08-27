@@ -7,7 +7,7 @@ interface InputContainerProps {
     children: ReactNode
 }
 
-export default function InputContainer({ labelText, children }: InputContainerProps) {
+const InputContainer = ({ labelText, children }: InputContainerProps) => {
     return (
         <div style={{ marginBottom: '16px' }}>
             <label style={{ color: mainColor, marginRight: '4px' }}>{labelText}:</label>
@@ -15,3 +15,5 @@ export default function InputContainer({ labelText, children }: InputContainerPr
         </div>
     )
 }
+
+export default InputContainer

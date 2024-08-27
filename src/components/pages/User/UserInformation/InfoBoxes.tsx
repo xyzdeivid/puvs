@@ -6,7 +6,7 @@ import { functions } from 'functions/user'
 
 import InfoBox from 'components/common/InfoBox'
 
-export default function Information() {
+const InfoBoxes = () => {
 
     const user = useContext(UserContext)
     const [weight] = user.weight
@@ -29,4 +29,6 @@ export default function Information() {
         </div>
     )
 
-} 
+}
+
+export default InfoBoxes

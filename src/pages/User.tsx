@@ -5,7 +5,7 @@ import { buttonStyle } from 'styles'
 import Container from 'components/common/Container'
 import UserInformation from 'components/pages/User/UserInformation'
 
-export default function Info() {
+const Info = () => {
 
     const navigate = useNavigate()
 
@@ -19,3 +19,5 @@ export default function Info() {
         </Container>
     )
 }
+
+export default Info

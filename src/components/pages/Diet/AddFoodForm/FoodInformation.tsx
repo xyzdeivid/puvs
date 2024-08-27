@@ -5,7 +5,7 @@ interface FoodInformationProps {
     amount: number
 }
 
-export default function FoodInformation({ food, amount }: FoodInformationProps) {
+const FoodInformation = ({ food, amount }: FoodInformationProps) => {
 
     function checkFractionDigit(number: number) {
         return number % 1 !== 0
@@ -23,3 +23,5 @@ export default function FoodInformation({ food, amount }: FoodInformationProps) 
     )
 
 }
+
+export default FoodInformation

@@ -5,7 +5,7 @@ interface InfoProps {
     text: string
 }
 
-export default function Info({ index, text }: InfoProps) {
+const Info = ({ index, text }: InfoProps) => {
 
     const listStyle: React.CSSProperties = {
         background: mainGradiente,
@@ -20,3 +20,5 @@ export default function Info({ index, text }: InfoProps) {
         <h4 style={listStyle}>{index}: <span style={{ fontWeight: 'lighter' }}>{text}</span></h4>
     )
 }
+
+export default Info

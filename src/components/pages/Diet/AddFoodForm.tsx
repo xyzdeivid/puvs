@@ -15,7 +15,7 @@ interface AddFoodFormProps {
     setShowAddFoodForm: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoodFormProps) {
+const AddFoodForm = ({ setDietFoods, setShowAddFoodForm }: AddFoodFormProps) => {
 
     const [source, setSource] = useState('carbo')
     const [food, setFood] = useState({} as Food)
@@ -61,3 +61,5 @@ export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoo
     )
 
 }
+
+export default AddFoodForm

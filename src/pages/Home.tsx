@@ -5,7 +5,7 @@ import About from 'components/pages/Home/About'
 import Form from 'components/pages/Home/Form'
 import OpenFormButton from 'components/common/OpenFormButton'
 
-export default function Home() {
+const Home = () => {
 
     const [showForm, setShowForm] = useState(false)
 
@@ -31,3 +31,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home

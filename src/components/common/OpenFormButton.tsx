@@ -5,7 +5,7 @@ interface OpenFormButtonProps {
     buttonText: string
 }
 
-export default function OpenFormButton({ setShowForm, buttonText }: OpenFormButtonProps) {
+const OpenFormButton = ({ setShowForm, buttonText }: OpenFormButtonProps) => {
 
     const buttonStyle: React.CSSProperties = {
         border: 'none',
@@ -21,3 +21,5 @@ export default function OpenFormButton({ setShowForm, buttonText }: OpenFormButt
         <button style={buttonStyle} onClick={() => setShowForm(true)}>{buttonText}</button>
     )
 }
+
+export default OpenFormButton

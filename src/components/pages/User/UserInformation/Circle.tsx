@@ -1,6 +1,6 @@
 import { mainColor } from 'styles'
 
-export default function Circle() {
+const Circle = () => {
 
     const circleStyle: React.CSSProperties = {
         width: '16px',
@@ -17,3 +17,5 @@ export default function Circle() {
     )
     
 }
+
+export default Circle

@@ -8,7 +8,7 @@ interface FoodsListProps {
     setShowInfoCard: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function FoodsList({ dietFoods, setSelectedFood, setShowInfoCard }: FoodsListProps) {
+const FoodsList = ({ dietFoods, setSelectedFood, setShowInfoCard }: FoodsListProps) => {
 
     return (
         <div>
@@ -23,3 +23,5 @@ export default function FoodsList({ dietFoods, setSelectedFood, setShowInfoCard 
     )
 
 }
+
+export default FoodsList

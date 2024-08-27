@@ -7,7 +7,7 @@ interface InfoCardProps {
     setShowInfoCard: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-export default function InfoCard({ food, setShowInfoCard }: InfoCardProps) {
+const InfoCard = ({ food, setShowInfoCard }: InfoCardProps) => {
 
     const infoCardStyle: React.CSSProperties = {
         backgroundColor: 'white',
@@ -29,3 +29,5 @@ export default function InfoCard({ food, setShowInfoCard }: InfoCardProps) {
     )
 
 }
+
+export default InfoCard

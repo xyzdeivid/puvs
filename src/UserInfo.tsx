@@ -24,7 +24,7 @@ interface UserProviderProps {
     children: ReactNode
 }
 
-export default function UserProvider({ children }: UserProviderProps) {
+const UserProvider = ({ children }: UserProviderProps) => {
 
     const [height, setHeight] = useState(0)
     const [weight, setWeight] = useState(0)
@@ -45,3 +45,5 @@ export default function UserProvider({ children }: UserProviderProps) {
         </UserContext.Provider>
     )
 }
+
+export default UserProvider

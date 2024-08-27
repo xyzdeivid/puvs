@@ -2,7 +2,7 @@ interface FormStyleProps {
     children: React.ReactNode
 }
 
-export default function FormStyle({ children }: FormStyleProps) {
+const FormStyle = ({ children }: FormStyleProps) => {
 
     const formStyle: React.CSSProperties = {
         backgroundColor: 'white',
@@ -19,3 +19,5 @@ export default function FormStyle({ children }: FormStyleProps) {
         </div>
     )
 }
+
+export default FormStyle

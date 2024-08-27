@@ -4,7 +4,7 @@ interface ConfirmButtonProps {
     text: string
 }
 
-export default function ConfirmButton({ text }: ConfirmButtonProps) {
+const ConfirmButton = ({ text }: ConfirmButtonProps) => {
 
     const buttonStyle: React.CSSProperties = {
         border: 'none',
@@ -22,3 +22,5 @@ export default function ConfirmButton({ text }: ConfirmButtonProps) {
     )
 
 }
+
+export default ConfirmButton

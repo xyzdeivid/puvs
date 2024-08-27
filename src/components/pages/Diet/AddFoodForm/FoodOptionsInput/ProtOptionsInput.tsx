@@ -11,7 +11,7 @@ interface ProtOptionsInputProps {
     setFood: React.Dispatch<React.SetStateAction<Food>>
 }
 
-export default function ProtOptionsInput({ setDefaultFood, setFood }: ProtOptionsInputProps) {
+const ProtOptionsInput = ({ setDefaultFood, setFood }: ProtOptionsInputProps) => {
 
     useEffect(() => {
         setDefaultFood(proteins[0])
@@ -28,3 +28,5 @@ export default function ProtOptionsInput({ setDefaultFood, setFood }: ProtOption
     )
 
 }
+
+export default ProtOptionsInput

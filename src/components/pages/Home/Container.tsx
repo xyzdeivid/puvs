@@ -4,7 +4,7 @@ interface ContainerProps {
     children: ReactNode
 }
 
-export default function Container({ children }: ContainerProps) {
+const Container = ({ children }: ContainerProps) => {
     return (
         <div style={{
             display: 'flex',
@@ -17,3 +17,5 @@ export default function Container({ children }: ContainerProps) {
         }}>{children}</div>
     )
 }
+
+export default Container

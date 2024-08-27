@@ -8,7 +8,7 @@ import AddFoodForm from 'components/pages/Diet/AddFoodForm'
 import FoodsList from 'components/pages/Diet/FoodsList'
 import InfoCard from 'components/pages/Diet/InfoCard'
 
-export default function Diet() {
+const Diet = () => {
 
     const [dietFoods, setDietFoods] = useState<Foods>([])
     const [showInfoCard, setShowInfoCard] = useState(false)
@@ -41,3 +41,5 @@ export default function Diet() {
     )
 
 }
+
+export default Diet

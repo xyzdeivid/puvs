@@ -10,7 +10,7 @@ interface FoodOptionsInputProps {
     setFood: React.Dispatch<React.SetStateAction<Food>>
 }
 
-export default function FoodOptionsInput({ source, setDefaultFood, setFood }: FoodOptionsInputProps) {
+const FoodOptionsInput = ({ source, setDefaultFood, setFood }: FoodOptionsInputProps) => {
 
     function sourceHandler() {
         if (source === 'carbo') {
@@ -28,3 +28,5 @@ export default function FoodOptionsInput({ source, setDefaultFood, setFood }: Fo
     )
     
 }
+
+export default FoodOptionsInput

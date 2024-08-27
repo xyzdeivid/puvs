@@ -6,7 +6,7 @@ interface SourceInputProps {
     setSource: React.Dispatch<React.SetStateAction<string>>
 }
 
-export default function SourceInput({ setSource }: SourceInputProps) {
+const SourceInput = ({ setSource }: SourceInputProps) => {
 
     function sourceHandler(value: string) {
         setSource(value)
@@ -22,3 +22,5 @@ export default function SourceInput({ setSource }: SourceInputProps) {
     )
 
 }
+
+export default SourceInput

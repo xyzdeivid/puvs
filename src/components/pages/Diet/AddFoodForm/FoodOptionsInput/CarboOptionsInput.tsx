@@ -10,7 +10,7 @@ interface CarboOptionsInputProps {
     setFood: React.Dispatch<React.SetStateAction<Food>>
 }
 
-export default function CarboOptions({ setDefaultFood, setFood }: CarboOptionsInputProps) {
+const CarboOptions = ({ setDefaultFood, setFood }: CarboOptionsInputProps) => {
 
     useEffect(() => {
         setDefaultFood(carbohydrates[0])
@@ -27,3 +27,5 @@ export default function CarboOptions({ setDefaultFood, setFood }: CarboOptionsIn
     )
 
 }
+
+export default CarboOptions
