@@ -1,5 +1,6 @@
 export interface Food {
-    name: string
+    name: string,
+    amount?: number
     carbohydrate: number
     protein: number
     fat: number

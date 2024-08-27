@@ -19,10 +19,11 @@ export default function InfoCard({ food, setShowInfoCard }: InfoCardProps) {
         <PopUpContainer setShowForm={setShowInfoCard}>
             <ul style={infoCardStyle}>
                 <li>Nome: {food.name}</li>
-                <li>Carboidrato: {food.carbohydrate}g</li>
-                <li>Proteína: {food.protein}g</li>
-                <li>Gordura: {food.fat}g</li>
-                <li>Caloria: {food.calories}kcal</li>
+                <li>Quantidade: {food.amount}g</li>
+                <li>Carboidrato: {(food.carbohydrate).toFixed(1)}g</li>
+                <li>Proteína: {(food.protein).toFixed(1)}g</li>
+                <li>Gordura: {(food.fat).toFixed(1)}g</li>
+                <li>Caloria: {(food.calories).toFixed(1)}kcal</li>
             </ul>
         </PopUpContainer>
     )

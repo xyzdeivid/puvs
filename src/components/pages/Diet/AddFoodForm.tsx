@@ -28,6 +28,7 @@ export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoo
     function createFood() {
         const createdFood: Food = {
             name: food.name,
+            amount: amount,
             carbohydrate: food.carbohydrate * amount,
             protein: food.protein * amount,
             fat: food.fat * amount,
