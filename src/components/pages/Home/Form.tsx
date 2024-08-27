@@ -2,7 +2,7 @@ import { useContext, useEffect, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { UserContext } from 'UserInfo'
 
-import FormContainer from 'components/common/Form/FormContainer'
+import PopUpContainer from 'components/common/PopUpContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import HeightInput from './FormComponents/HeightInput'
 import WeightInput from './FormComponents/WeightInput'
@@ -36,7 +36,7 @@ export default function Form({ setShowForm }: FormProps) {
     const navigate = useNavigate()
 
     return (
-        <FormContainer setShowForm={setShowForm}>
+        <PopUpContainer setShowForm={setShowForm}>
             <FormStyle>
                 <form onSubmit={e => {
                     e.preventDefault()
@@ -52,6 +52,6 @@ export default function Form({ setShowForm }: FormProps) {
                     <ConfirmButton text='Verificar' />
                 </form>
             </FormStyle>
-        </FormContainer>
+        </PopUpContainer>
     )
 }

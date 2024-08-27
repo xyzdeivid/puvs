@@ -2,7 +2,7 @@ import { useCallback, useState } from 'react'
 
 import { Food, Foods } from 'types'
 
-import FormContainer from 'components/common/Form/FormContainer'
+import PopUpContainer from 'components/common/PopUpContainer'
 import FormStyle from 'components/common/Form/FormStyle'
 import SourceInput from './AddFoodForm/SourceInput'
 import FoodOptionsInput from './AddFoodForm/FoodOptionsInput'
@@ -37,7 +37,7 @@ export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoo
     }
 
     return (
-        <FormContainer setShowForm={setShowAddFoodForm}>
+        <PopUpContainer setShowForm={setShowAddFoodForm}>
             <FormStyle>
                 <form onSubmit={e => {
                     e.preventDefault()
@@ -56,7 +56,7 @@ export default function AddFoodForm({ setDietFoods, setShowAddFoodForm }: AddFoo
                     <FormConfirmButton text='Confirmar' />
                 </form>
             </FormStyle>
-        </FormContainer>
+        </PopUpContainer>
     )
 
 }
