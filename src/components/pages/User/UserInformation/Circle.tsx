@@ -15,7 +15,7 @@ const Circle = () => {
     return (
         <div style={circleStyle}></div>
     )
-    
+
 }
 
 export default Circle

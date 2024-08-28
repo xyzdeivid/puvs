@@ -8,7 +8,7 @@ interface SourceInputProps {
 
 const SourceInput = ({ setSource }: SourceInputProps) => {
 
-    function sourceHandler(value: string) {
+    const sourceHandler = (value: string) => {
         setSource(value)
     }
 

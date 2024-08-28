@@ -13,49 +13,49 @@ const CentralInformation = ({ dietFoods }: CentralInformationProps) => {
     const user = useContext(UserContext)
     const [weight] = user.weight
 
-    function carboCounter() {
+    const carboCounter = () => {
         const totalCarbo = dietFoods.reduce((acc, current) => {
             return acc + current.carbohydrate
         }, 0)
         return totalCarbo.toFixed(1)
     }
 
-    function gkgCarboCounter() {
+    const gkgCarboCounter = () => {
         const gkgNumber = Number(carboCounter()) / weight
         return gkgNumber
-        ? gkgNumber.toFixed(1)
-        : '0'
+            ? gkgNumber.toFixed(1)
+            : '0'
     }
 
-    function protCounter() {
+    const protCounter = () => {
         const totalProt = dietFoods.reduce((acc, current) => {
             return acc + current.protein
         }, 0)
         return totalProt.toFixed(1)
     }
 
-    function gkgProtCounter() {
+    const gkgProtCounter = () => {
         const gkgNumber = Number(protCounter()) / weight
         return gkgNumber
-        ? gkgNumber.toFixed(1)
-        : '0'
+            ? gkgNumber.toFixed(1)
+            : '0'
     }
 
-    function fatCounter() {
+    const fatCounter = () => {
         const totalFat = dietFoods.reduce((acc, current) => {
             return acc + current.fat
         }, 0)
         return totalFat.toFixed(1)
     }
 
-    function gkgFatCounter() {
+    const gkgFatCounter = () => {
         const gkgNumber = Number(fatCounter()) / weight
         return gkgNumber
-        ? gkgNumber.toFixed(1)
-        : '0'
+            ? gkgNumber.toFixed(1)
+            : '0'
     }
 
-    function caloriesCounter() {
+    const caloriesCounter = () => {
         const totalCalories = dietFoods.reduce((acc, current) => {
             return acc + current.calories
         }, 0)

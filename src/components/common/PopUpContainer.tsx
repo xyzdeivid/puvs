@@ -9,7 +9,7 @@ const PopUpContainer = ({ setShowForm, children }: PopUpContainerProps) => {
 
     const formRef = useRef(null)
 
-    function closeForm(e: React.MouseEvent<HTMLDivElement, MouseEvent>) {
+    const closeForm = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         if (formRef.current) {
             if (e.target === formRef.current) {
                 setShowForm(false)

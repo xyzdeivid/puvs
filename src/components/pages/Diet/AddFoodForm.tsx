@@ -25,7 +25,7 @@ const AddFoodForm = ({ setDietFoods, setShowAddFoodForm }: AddFoodFormProps) => 
         setFood(food)
     }, [])
 
-    function createFood() {
+    const createFood = () => {
         const createdFood: Food = {
             name: food.name,
             amount: amount,

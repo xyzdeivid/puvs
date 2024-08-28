@@ -12,7 +12,7 @@ interface FoodOptionsInputProps {
 
 const FoodOptionsInput = ({ source, setDefaultFood, setFood }: FoodOptionsInputProps) => {
 
-    function sourceHandler() {
+    const sourceHandler = () => {
         if (source === 'carbo') {
             return <CarboOptionsInput setDefaultFood={setDefaultFood} setFood={setFood} />
         }
@@ -26,7 +26,7 @@ const FoodOptionsInput = ({ source, setDefaultFood, setFood }: FoodOptionsInputP
             {sourceHandler()}
         </InputContainer>
     )
-    
+
 }
 
 export default FoodOptionsInput

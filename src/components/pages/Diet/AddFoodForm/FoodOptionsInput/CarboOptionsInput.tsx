@@ -18,13 +18,13 @@ const CarboOptions = ({ setDefaultFood, setFood }: CarboOptionsInputProps) => {
     }, [setDefaultFood])
 
     return (
-            <select onChange={e => setFood(JSON.parse(e.target.value))} style={selectStyle}>
-                {carbohydrates.map(food => {
-                    return (
-                        <option value={JSON.stringify(food)} key={food.name}>{food.name}</option>
-                    )
-                })}
-            </select>
+        <select onChange={e => setFood(JSON.parse(e.target.value))} style={selectStyle}>
+            {carbohydrates.map(food => {
+                return (
+                    <option value={JSON.stringify(food)} key={food.name}>{food.name}</option>
+                )
+            })}
+        </select>
     )
 
 }

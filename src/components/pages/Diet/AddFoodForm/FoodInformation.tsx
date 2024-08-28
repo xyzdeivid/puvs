@@ -7,10 +7,10 @@ interface FoodInformationProps {
 
 const FoodInformation = ({ food, amount }: FoodInformationProps) => {
 
-    function checkFractionDigit(number: number) {
+    const checkFractionDigit = (number: number) => {
         return number % 1 !== 0
-        ? number.toFixed(1)
-        : number.toFixed(0)
+            ? number.toFixed(1)
+            : number.toFixed(0)
     }
 
     return (
