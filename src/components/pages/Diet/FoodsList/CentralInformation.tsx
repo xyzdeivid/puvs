@@ -59,7 +59,7 @@ const CentralInformation = ({ dietFoods }: CentralInformationProps) => {
         const totalCalories = dietFoods.reduce((acc, current) => {
             return acc + current.calories
         }, 0)
-        return totalCalories.toFixed(1)
+        return totalCalories
     }
 
     return (
