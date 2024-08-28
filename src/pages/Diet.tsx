@@ -1,12 +1,12 @@
 import { useState } from 'react'
 
-import { Food, Foods } from 'types'
+import { Foods, Food } from 'types'
 
 import Container from 'components/common/Container'
-import OpenFormButton from 'components/common/OpenFormButton'
-import AddFoodForm from 'components/pages/Diet/AddFoodForm'
 import FoodsList from 'components/pages/Diet/FoodsList'
 import InfoCard from 'components/pages/Diet/InfoCard'
+import OpenFormButton from 'components/common/OpenFormButton'
+import AddFoodForm from 'components/pages/Diet/AddFoodForm'
 
 const Diet = () => {
 

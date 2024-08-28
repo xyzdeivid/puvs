@@ -1,6 +1,6 @@
-import PopUpContainer from 'components/common/PopUpContainer'
-
 import { Food } from 'types'
+
+import PopUpContainer from 'components/common/PopUpContainer'
 
 interface InfoCardProps {
     food: Food

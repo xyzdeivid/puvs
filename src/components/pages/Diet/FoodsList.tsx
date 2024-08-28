@@ -1,7 +1,7 @@
-import { Food, Foods } from 'types'
+import { Foods, Food } from 'types'
 
-import List from './FoodsList/List'
-import CentralInformation from './FoodsList/CentralInformation'
+import List from 'components/pages/Diet/FoodsList/List'
+import CentralInformation from 'components/pages/Diet/FoodsList/CentralInformation'
 
 interface FoodsListProps {
     dietFoods: Foods

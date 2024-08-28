@@ -1,13 +1,13 @@
-import { useCallback, useState } from 'react'
+import { useState, useCallback } from 'react'
 
-import { Food, Foods } from 'types'
+import { Foods, Food } from 'types'
 
 import PopUpContainer from 'components/common/PopUpContainer'
 import FormStyle from 'components/common/Form/FormStyle'
-import SourceInput from './AddFoodForm/SourceInput'
-import FoodOptionsInput from './AddFoodForm/FoodOptionsInput'
-import FoodInformation from './AddFoodForm/FoodInformation'
-import AmountInput from './AddFoodForm/AmountInput'
+import SourceInput from 'components/pages/Diet/AddFoodForm/SourceInput'
+import FoodOptionsInput from 'components/pages/Diet/AddFoodForm/FoodOptionsInput'
+import AmountInput from 'components/pages/Diet/AddFoodForm/AmountInput'
+import FoodInformation from 'components/pages/Diet/AddFoodForm/FoodInformation'
 import FormConfirmButton from 'components/common/Form/FormConfirmButton'
 
 interface AddFoodFormProps {

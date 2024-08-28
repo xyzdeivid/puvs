@@ -1,8 +1,8 @@
 import { useContext } from 'react'
 
-import { UserContext } from 'UserInfo'
-
 import { Foods } from 'types'
+
+import { UserContext } from 'UserInfo'
 
 interface CentralInformationProps {
     dietFoods: Foods

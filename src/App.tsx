@@ -1,10 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
+import UserProvider from 'UserInfo'
+
 import Home from 'pages/Home'
 import User from 'pages/User'
 import Diet from 'pages/Diet'
-
-import UserProvider from 'UserInfo'
 
 import './App.css'
 

@@ -1,6 +1,6 @@
-import InputContainer from 'components/common/Form/inputs/InputContainer'
-
 import { selectStyle } from 'styles'
+
+import InputContainer from 'components/common/Form/inputs/InputContainer'
 
 interface ExerciseLevelInputProps {
     setExerciseLevel: React.Dispatch<React.SetStateAction<number>>

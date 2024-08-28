@@ -1,4 +1,4 @@
-import { Food, Foods } from 'types'
+import { Foods, Food } from 'types'
 
 interface ListProps {
     dietFoods: Foods

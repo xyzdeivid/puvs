@@ -1,8 +1,8 @@
 import { Food } from 'types'
 
 import InputContainer from 'components/common/Form/inputs/InputContainer'
-import CarboOptionsInput from './FoodOptionsInput/CarboOptionsInput'
-import ProtOptionsInput from './FoodOptionsInput/ProtOptionsInput'
+import CarboOptionsInput from 'components/pages/Diet/AddFoodForm/FoodOptionsInput/CarboOptionsInput'
+import ProtOptionsInput from 'components/pages/Diet/AddFoodForm/FoodOptionsInput/ProtOptionsInput'
 
 interface FoodOptionsInputProps {
     source: string

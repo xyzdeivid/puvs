@@ -1,9 +1,10 @@
-import { carbohydrates } from 'foods'
 import { useEffect } from 'react'
 
-import { selectStyle } from 'styles'
-
 import { Food } from 'types'
+
+import { carbohydrates } from 'foods'
+
+import { selectStyle } from 'styles'
 
 interface CarboOptionsInputProps {
     setDefaultFood: (food: Food) => void

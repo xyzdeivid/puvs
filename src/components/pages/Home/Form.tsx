@@ -1,14 +1,15 @@
-import { useContext, useEffect, useCallback } from 'react'
+import { useContext, useCallback, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+
 import { UserContext } from 'UserInfo'
 
 import PopUpContainer from 'components/common/PopUpContainer'
 import FormStyle from 'components/common/Form/FormStyle'
-import HeightInput from './FormComponents/HeightInput'
-import WeightInput from './FormComponents/WeightInput'
-import SexInput from './FormComponents/SexInput'
-import AgeInput from './FormComponents/AgeInput'
-import ExerciseLevelInput from './FormComponents/ExerciseLevelInput'
+import HeightInput from 'components/pages/Home/FormComponents/HeightInput'
+import WeightInput from 'components/pages/Home/FormComponents/WeightInput'
+import SexInput from 'components/pages/Home/FormComponents/SexInput'
+import AgeInput from 'components/pages/Home/FormComponents/AgeInput'
+import ExerciseLevelInput from 'components/pages/Home/FormComponents/ExerciseLevelInput'
 import ConfirmButton from 'components/common/Form/FormConfirmButton'
 
 interface FormProps {

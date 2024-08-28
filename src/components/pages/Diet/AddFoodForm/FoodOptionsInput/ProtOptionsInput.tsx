@@ -1,10 +1,10 @@
 import { useEffect } from 'react'
 
+import { Food } from 'types'
+
 import { proteins } from 'foods'
 
 import { selectStyle } from 'styles'
-
-import { Food } from 'types'
 
 interface ProtOptionsInputProps {
     setDefaultFood: (food: Food) => void
