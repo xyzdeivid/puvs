@@ -18,7 +18,7 @@ const Diet = () => {
     return (
         <Container>
             {
-                dietFoods
+                dietFoods[0]
                     ? <FoodsList
                         dietFoods={dietFoods}
                         setSelectedFood={setSelectedFood}
