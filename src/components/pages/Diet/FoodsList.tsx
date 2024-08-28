@@ -1,4 +1,5 @@
 import { Food, Foods } from 'types'
+
 import List from './FoodsList/List'
 import CentralInformation from './FoodsList/CentralInformation'
 
@@ -12,6 +13,7 @@ const FoodsList = ({ dietFoods, setSelectedFood, setShowInfoCard }: FoodsListPro
 
     return (
         <div>
+            <h3 style={{ textAlign: 'center', marginBottom: '8px' }}>Alimentos da dieta</h3>
             <List
                 dietFoods={dietFoods}
                 setSelectedFood={setSelectedFood}
