@@ -3,51 +3,51 @@ import { Foods } from 'types'
 export const carbohydrates: Foods = [
 
     {
-        name: 'Arroz Branco (Cozido)',
-        carbohydrate: 0.28,
-        protein: 0.02,
+        name: 'Arroz Branco - Cozido',
+        carbohydrate: 0.281,
+        protein: 0.025,
         fat: 0.002,
-        calories: 1.3
+        calories: 1.28
     },
 
     {
-        name: 'Feijão Preto (Cozido)',
-        carbohydrate: 0.16,
-        protein: 0.06,
-        fat: 0.003,
-        calories: 0.9
+        name: 'Feijão Preto - Cozido',
+        carbohydrate: 0.14,
+        protein: 0.045,
+        fat: 0.005,
+        calories: 0.77
     },
 
     {
-        name: 'Batata Inglesa (Cozida)',
-        carbohydrate: 0.18,
-        protein: 0.02,
+        name: 'Batata Inglesa - Cozida',
+        carbohydrate: 0.119,
+        protein: 0.012,
+        fat: 0.001,
+        calories: 0.52
+    },
+
+    {
+        name: 'Batata Doce - Cozida',
+        carbohydrate: 0.183,
+        protein: 0.006,
         fat: 0.001,
         calories: 0.77
     },
 
     {
-        name: 'Batata Doce (Cozida)',
-        carbohydrate: 0.20,
-        protein: 0.01,
-        fat: 0.002,
-        calories: 0.86
-    },
-
-    {
-        name: 'Mandioca (Cozida)',
-        carbohydrate: 0.36,
-        protein: 0.01,
+        name: 'Mandioca - Cozida',
+        carbohydrate: 0.301,
+        protein: 0.006,
         fat: 0.003,
-        calories: 1.5
+        calories: 1.25
     },
 
     {
-        name: 'Banana Prata',
-        carbohydrate: 0.23,
-        protein: 0.011,
+        name: 'Banana Prata - Crua',
+        carbohydrate: 0.26,
+        protein: 0.013,
         fat: 0.001,
-        calories: 0.89
+        calories: 0.98
     }
 
 ]
@@ -55,27 +55,19 @@ export const carbohydrates: Foods = [
 export const proteins: Foods = [
 
     {
-        name: 'Peito de Frango (Cru)',
+        name: 'Peito de Frango - Cru',
         carbohydrate: 0,
-        protein: 0.23,
-        fat: 0.02,
-        calories: 1.1
+        protein: 0.215,
+        fat: 0.03,
+        calories: 1.19
     },
 
     {
-        name: 'Ovo (Cru)',
-        carbohydrate: 0.007,
-        protein: 0.12,
-        fat: 0.1,
-        calories: 1.4
-    },
-
-    {
-        name: 'Leite Integral',
-        carbohydrate: 0.05,
-        protein: 0.03,
-        fat: 0.04,
-        calories: 0.64
+        name: 'Ovo - Cru',
+        carbohydrate: 0.016,
+        protein: 0.13,
+        fat: 0.089,
+        calories: 1.43
     }
 
 ]
